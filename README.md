@@ -2,3 +2,7 @@
 Medical VLM for quantitative measurement tasks
 
 See the [project context and plan](docs/project-plan.md) for the research goals, proposed architectures, and implementation sequence.
+
+See [CONTINUITY.md](CONTINUITY.md) for current decisions, progress, and next steps;
+the [phase-one report](docs/baseline-and-data.md) for detailed checks; and the
+[cluster runbook](docs/cluster-runbook.md) for execution instructions.

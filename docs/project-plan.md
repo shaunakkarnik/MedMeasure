@@ -51,7 +51,7 @@ Version 1 provides a diagnostic: accurate mask-derived measurements alongside in
 
 ## Project sequence
 
-1. **Establish data and baseline.** Select one lesion-sizing task and dataset for the initial pilot; kidney tumors in KiTS23 are a candidate, not a finalized selection. Reproduce MedVision-V0 results on the selected evaluation subset. Verify that ground-truth masks passed through the measurement pipeline reproduce reference measurements.
+1. **Establish data and baseline.** Begin with a focused lesion-sizing development subset that supports the small-target research goal. Evaluate unchanged MedVision-V0 on the same annotation version and evaluation examples used for the proposed system to establish a matched baseline. Audit case splits and potential training exposure. Verify that ground-truth masks passed through the measurement pipeline reproduce reference measurements.
 2. **Implement Version 1.** Build the intended decoder with both intermediate visual features and VLM conditioning from the outset. Verify spatial alignment and overfit a small batch before broader training.
 3. **Evaluate and refine Version 1.** Measure segmentation and downstream measurement quality. Explore encoder adaptation if frozen features are insufficient.
 4. **Run explanatory ablations.** Compare intermediate-feature fusion against final-layer features, VLM conditioning against simpler target conditioning, and frozen against adapted encoders. These explain the combined model's results; they are not prerequisites for implementing it.
@@ -68,7 +68,7 @@ Version 1 provides a diagnostic: accurate mask-derived measurements alongside in
 - **Honest inference:** Use predicted masks and any predicted localization inputs at test time. Label ground-truth-mask or box experiments as diagnostics. Include empty masks and failed fits in failure reporting under the evaluation protocol.
 - **Interpretation:** Report specialist-system gains and VLM-generated-answer gains separately. Neither benchmark improvement alone establishes clinical readiness.
 
-Implementation has not yet been validated. Dataset scope, GPU budget, decoder dimensions, hidden-state extraction, and the Version 2 feedback design remain to be finalized. The immediate milestone is a working Version 1 pilot with reproducible measurement evaluation.
+The initial milestone is a working Version 1 pilot with reproducible measurement evaluation. Broader tumor/lesion evaluation is needed to establish whether improvements generalize beyond the development subset.
 
 ## Resources
 

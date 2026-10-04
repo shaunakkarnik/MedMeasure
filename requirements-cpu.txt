@@ -1,0 +1,6 @@
+# Separate CPU audit environment; the upstream GPU environment has its own pins.
+numpy==1.26.4
+scipy==1.14.1
+opencv-python-headless==4.10.0.84
+nibabel==5.3.2
+matplotlib==3.9.2

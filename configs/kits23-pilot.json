@@ -1,0 +1,24 @@
+{
+  "dataset_repo": "YongchengYAO/MedVision",
+  "dataset_revision": "f4040ed7d2d2b45e09c1a996ad2969f2018051d3",
+  "annotation_version": "1.4.0",
+  "benchmark_commit": "45fa8e52684a65da6e1c0ef6ef422d5d4c3e94bd",
+  "task": "KiTS23_TumorLesionSize_Task01_Axial-CoT",
+  "sha256": {
+    "benchmark_plan_biometry_v1.4.0.json.gz": "f076a5eca8f6526310c8a8e53dbd052816aab168c0f719bb9a753b6fd7094824",
+    "benchmark_plan_biometry_v1.0.0.json.gz": "962921e551dc8ca82822d055d684ac8b33e9df42afe26151d86fed32419646f1",
+    "benchmark_plan_biometry_v1.1.1.json.gz": "efd5b872af73af9893db56e1633e1c03b4e502a8c04e2c477145d24f227ca705",
+    "benchmark_plan_biometry_v1.1.0.json.gz": "a827f3eb52f6072bcecf4631c4c85b67e3edcc6afb1886687853c87a2bc97d1b"
+  },
+  "annotation_archive_sha256": "d912789d7f4861171474f5e75c2ea7ceeba3cdc6ff37c8e100df8cfe07fa1540",
+  "planner_source_sha256": "1dd78dd60fa42f4205836ac1395b5f45319e5f7237ca875cc5172fb3be23c49e",
+  "benchmark_files_sha256": {
+    "benchmark/eval__medvision-model-rft.py": "c819c2021053c4824f834909bb8c0ea13b35b39164b7cf77879b964142f51102",
+    "rft/verl/rft_prompts.py": "de0fcc0e2d47c396556654a853dd15988b4b5b78bdf1ae9dce7ddf42ac712e9c",
+    "medvision_lmms_eval/lmms_eval/tasks/medvision/medvision_utils.py": "d65b554e16a00a0dd76a490321ba6b79d90d46d834668ae6aea60ffd89ca0ddf",
+    "medvision_lmms_eval/lmms_eval/evaluator.py": "5cc8be5f230742fae81ce3ca9987055b59e13973c7dab82afbdcacac1c441937",
+    "medvision_lmms_eval/lmms_eval/__main__.py": "0592d59a6d4baa6ff6a230890e5d386e8a7aa9c16dc24986317f091701197cd6"
+  },
+  "model_repo": "YongchengYAO/MedVision-V0-7B",
+  "model_revision": "9d7de00824e37730dd2f207d33099244bc5f2a75"
+}

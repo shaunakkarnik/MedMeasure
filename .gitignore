@@ -219,3 +219,9 @@ __marimo__/
 
 # macOS Finder metadata
 .DS_Store
+
+# Local research data, checkpoints, upstream checkout and generated runs
+/data/
+/models/
+/external/
+/runs/

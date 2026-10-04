@@ -5,3 +5,10 @@
 - If you are unsure about a significant implementation decision, briefly explain the options and tradeoffs and ask me how to proceed. Use your judgment for routine decisions.
 - Favor fast iteration and my feedback. Keep validation targeted; write tests only when I ask, when they help you develop or debug a large task, or when they address a concrete risk of substantial harm or a mistake that is difficult to undo.
 - Be clear about what changed and what you actually checked. Keep explanations brief.
+
+## Project continuity
+
+- Read the root [CONTINUITY.md](CONTINUITY.md) when starting or resuming work.
+- Keep [project-plan.md](docs/project-plan.md) as the durable context, research goals, methodology, and overall sequence. Update it only when those change; do not add progress reports, temporary constraints, or intermediate implementation decisions.
+- Maintain `CONTINUITY.md` for current decisions, meaningful progress, validation limits, active constraints, and the next steps needed to resume. Update it when these materially change.
+- Keep `CONTINUITY.md` short and high-signal: replace stale information rather than append a chronological log. Link to detailed reports, configurations, and runbooks instead of duplicating them. Clearly distinguish completed checks from unverified work.
