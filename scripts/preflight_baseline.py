@@ -21,7 +21,7 @@ def main():
     root = Path(__file__).resolve().parents[1]
     lock = json.loads((root/'configs/kits23-pilot.json').read_text())
     if run['annotation_version'] != '1.4.0' or run['task'] != lock['task']:
-        raise ValueError('Cluster preflight currently supports only the KiTS23 v1.4.0 pilot')
+        raise ValueError('Baseline preflight currently supports only the KiTS23 v1.4.0 pilot')
     dataset_dir = Path(run['data_dir'])/'Datasets/KiTS23'
     plan = dataset_dir/'benchmark_plan_biometry_v1.4.0.json.gz'
     if sha256(plan) != lock['sha256'][plan.name]:

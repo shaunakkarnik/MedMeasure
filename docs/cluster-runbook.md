@@ -1,5 +1,13 @@
 # KiTS23 cluster runbook
 
+The commands below implement the chosen **official v1.4.0 sizing annotations and
+case split**. Report potential MedVision-V0 checkpoint exposure to current test cases
+and the 43-case diagnostic separately, deriving the diagnostic from the complete
+v1.4.0 run with the scorer's checked `--subset-of` selection. Immediate scope is sizing only. Historical v1.0.0 evaluation is deferred;
+detection is a possible extension and neither evaluation is implemented. A held-out historical
+evaluation of a model trained on v1.4.0 cases requires separate training that excludes
+v1.0.0 test cases. See [continuity](../CONTINUITY.md) for pending work.
+
 These are **prepared instructions, not executed cluster jobs**. Confirm the scheduler,
 GPU allocation, account/partition, wall-time policy, storage quota, internet access
 and approved environment method before running. The GPU runner currently uses one
@@ -113,9 +121,10 @@ For the scored run, prepare a **different directory** and add:
 --sample-indices runs/kits23-data-audit/test_indices.json
 ```
 
-This evaluates all 3,179 official test rows, overriding the smoke limit. For the
-separate historical-disjoint diagnostic, use `test_legacy_disjoint_indices.json`.
-Those 825 rows are an additional diagnostic, not a replacement official test set.
+This evaluates all 3,179 official test rows, overriding the smoke limit. The chosen
+plan derives the 43-case/825-row diagnostic from these outputs; do not schedule
+another diagnostic inference run. Retain `test_legacy_disjoint_indices.json` and
+the diagnostic manifest to identify those rows for checked selection and scoring.
 
 ## Optional: prepare disjoint jobs for time-limited allocations
 
@@ -132,9 +141,9 @@ Tune it after a timed smoke run. Case slices can cross job boundaries; the fixed
 train/validation/test assignment does not change.
 
 Prepare one fresh baseline run per shard using `--sample-indices` with its index
-file. Do not mix official and diagnostic logs: the diagnostic overlaps the official
-set and must be summarized separately. You can also derive the diagnostic from a
-complete official run later; running it separately is optional.
+file. Pool the complete official logs once, then select diagnostic rows for a
+separate summary using `--subset-of` with the full manifest. Do not concatenate
+the selected diagnostic logs with the full logs: that would duplicate examples.
 
 ## 4. Execute only after a GPU allocation is available
 
@@ -198,3 +207,9 @@ python scripts/summarize_baseline.py \
 The two logs above illustrate the syntax; all 32 shard logs are needed for the
 current 100-row plan. Missing rows or duplicate rows cause an error. Results are
 pooled per example, rather than averaging shard means with unequal sample counts.
+
+For the diagnostic, use the same full-run sample logs, change `--selected-rows` to
+`runs/kits23-data-audit/test_legacy_disjoint.jsonl`, and add
+`--subset-of runs/kits23-data-audit/test.jsonl`. Full-run coverage is validated before
+the diagnostic is selected. For Colab setup and chunk recovery see the
+[Colab runbook](colab-runbook.md).
