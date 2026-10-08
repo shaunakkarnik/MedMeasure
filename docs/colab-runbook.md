@@ -34,6 +34,25 @@ real-data transfers are explicit notebook steps. Installation, GPU memory use,
 real-mask parity and end-to-end Colab inference remain unverified until executed.
 Do not treat notebook syntax/CPU checks as evidence that GPU evaluation works.
 
+## Cell output and the current-runtime logging fix
+
+The updated notebook defines `stream_command` before setup and routes subprocess
+stdout/stderr through the notebook's Python output stream. Byte-based forwarding
+shows progress messages without waiting for a newline; `PYTHONUNBUFFERED=1` and
+UTF-8 encoding propagate to Python child processes. Nonzero exits still raise an
+error, and interrupting a future streamed command terminates its process group.
+Git query stdout remains captured intentionally for commit checks and file retrieval.
+
+For a notebook already running the old helper, wait for its active download/staging
+cell to finish. Copy the entire contents of
+[colab_logging_hotfix.py](../notebooks/colab_logging_hotfix.py) into a new code cell
+and run it before backup/geometry/inference. It redefines `run`, so the existing
+`script` helper automatically uses live output for subsequent commands. No Git
+checkout, dependency reinstall, `CODE_COMMIT` change or runtime restart is needed.
+Save the edited notebook copy in Drive. The hotfix cannot recover previous output
+or attach to a child process that was already started. Do not interrupt an active
+download solely to apply it.
+
 ## Persistence and recovery
 
 Outputs live in `MyDrive/MedMeasure/<RUN_NAME>/`: audit, shard plan, geometry checks,
@@ -41,9 +60,63 @@ and evaluation attempts. Data, HF caches, weights, source and Python environment
 live on the runtime's local disk. The upstream loader may download/preprocess the
 full KiTS23 dataset and build training/test caches even for a short smoke run; no
 storage or staging-time estimate has been measured. Watch free disk space.
-A new Colab VM needs setup and staging again. To reuse data/weights across sessions,
-you may store archives on Drive and restore locally, but this notebook does not
-claim that the CT dataset fits your Drive quota or Colab disk allocation.
+A new Colab VM needs environment setup again. The notebook now supports a shared
+processed-data archive under `MyDrive/MedMeasure/cache/kits23-<dataset-revision>-v140.tar`.
+Its completed JSON sidecar records dataset provenance, original runtime path, size
+and archive SHA-256. Both files are required; partial or corrupt backups are refused.
+Before backing up, run the size-estimate cell and check Drive's actual free quota.
+`SAVE_DATA_CACHE=False` skips saving when storage is insufficient.
+
+Backup includes the staged data root: processed scans/masks, completion markers,
+source, metadata and HF loader caches. Authentication-token files and locks are
+excluded. Model weights live outside this root and are not backed up. The tar is
+uncompressed because scans are already compressed, and it writes directly to Drive
+without needing another full-size local copy. Do not modify/stage data during backup.
+An interrupted backup is preserved as `.partial`; preserve or remove it explicitly
+before retrying. If interrupted after archive rename but before the JSON sidecar,
+the archive is incomplete and must be preserved/removed before a fresh backup.
+
+New runtimes verify the checksum, restore into the same empty `/content/medmeasure-data`
+directory (HF caches may contain absolute paths), then run normal staging/preflight.
+Processed files and upstream completion markers are reused; environment installation
+and task-cache checks still run. Restore reads the archive for validation and extraction
+and can take time. It requires enough local disk space. Real-data backup, Drive quota,
+and end-to-end restored loader behavior remain unverified; synthetic round trips pass.
+
+When resuming an older sizing run with the updated notebook, keep its original
+`CODE_COMMIT` and set `CACHE_CODE_COMMIT` to the new full commit containing the helper.
+This fetches the standalone cache script without changing the inference checkout or
+its recorded provenance. New runs may leave `CACHE_CODE_COMMIT` blank to use `CODE_COMMIT`.
+
+### Back up from an already-running notebook
+
+Editing or pushing the local notebook does not change Colab's running notebook or
+VM. Add the following cells to the existing notebook after staging finishes. Keep
+its current `CODE_COMMIT`; no checkout, environment reinstall or restart is needed.
+First commit/push the new helper and notebook changes locally.
+
+Fetch just the helper and inspect the required storage (uses existing notebook variables):
+
+```python
+git('fetch', 'origin', 'main', cwd=REPO,
+    authenticated=bool(secret('GITHUB_TOKEN')))
+CACHE_HELPER = Path('/content/cache_colab_data.py')
+CACHE_HELPER.write_text(git('show', 'FETCH_HEAD:scripts/cache_colab_data.py', cwd=REPO)+'\n')
+DATA_ARCHIVE = Path('/content/drive/MyDrive/MedMeasure/cache') / f"kits23-{lock['dataset_revision']}-v140.tar"
+run(PYTHON, CACHE_HELPER, 'inspect', '--data-dir', DATA,
+    '--archive', DATA_ARCHIVE, '--config', REPO/'configs/kits23-pilot.json')
+```
+
+After checking available Drive quota, run a separate cell:
+
+```python
+run(PYTHON, CACHE_HELPER, 'backup', '--data-dir', DATA,
+    '--archive', DATA_ARCHIVE, '--config', REPO/'configs/kits23-pilot.json')
+```
+
+Wait for `Backup complete` and confirm both archive and JSON sidecar appear in Drive.
+The existing data is only read; sizing and subsequent KiTS23 detection can still use
+the current runtime paths. Save the edited Colab notebook copy in Drive too.
 
 Completed chunks have a completion marker plus a sample-log checksum. Before reuse,
 the wrapper verifies indices, identities and exact coverage. Evaluation provenance
