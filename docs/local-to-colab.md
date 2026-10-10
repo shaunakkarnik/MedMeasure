@@ -71,6 +71,19 @@ If a previous audit/geometry directory is incomplete or mismatched, preserve it 
 use a new `--output` directory. Repeated runs reuse available staging files; this is
 not a guarantee of row-level or mid-conversion resumption after interruption.
 
+If an older checker reported `Image differs from annotation grid` or `Spacing
+differs from annotation`, update the code first: upstream rounds those metadata
+fields to three decimal places. The corrected checker compares at that precision
+while keeping the full-precision tumor measurement checks unchanged. Preserve the
+failed audit and resume with the same data directory and a fresh audit folder:
+
+```bash
+.venv-data/bin/python scripts/prepare_local_data.py --workers 2 --output runs/local-data-preparation-fixed
+```
+
+For a completed staging run, this reuses the processed scans without downloading
+them again. Review the new overlays before uploading the resulting bundle.
+
 ## 2. Upload to Drive once
 
 Create `MyDrive/MedMeasure/cache/` in your Google Drive. Upload both the `.tar` and
@@ -215,7 +228,11 @@ executed live here.
   root and repeated those checks. Network download calls were blocked during cache
   rebuilding. This checks metadata/path portability, not real-scan parity.
 - Notebook cells/scripts compile; the inference notebook has no scan-staging call.
-- Real local scan download/reorientation, real-data geometry, Drive throughput/quota,
+- A real local scan check passed all 20 sampled training slices after correcting
+  header comparisons for upstream's three-decimal metadata precision. This checks
+  image/mask alignment and reference ellipse measurements for that sample; all
+  overlays still need visual review. It is not a full-dataset geometry audit.
+- Drive throughput/quota,
   Colab dependency compatibility, CLI lifecycle and GPU inference remain unverified.
 
 For lower-level recovery and output definitions, see the [Colab runbook](colab-runbook.md).

@@ -1,9 +1,19 @@
 import unittest
 import numpy as np
-from medmeasure.geometry import fit_mask
+from medmeasure.geometry import fit_mask, matches_annotation_metadata
 
 
 class GeometryChecks(unittest.TestCase):
+    def test_annotation_metadata_uses_upstream_rounding(self):
+        self.assertTrue(matches_annotation_metadata(
+            [.828125, .7890625], np.asarray([.828, .789], dtype=np.float32)))
+        affine = np.diag([.828125, .828125, 1., 1.])
+        affine[0, 3] = -212.000125
+        self.assertTrue(matches_annotation_metadata(affine, np.round(affine, 3)))
+        self.assertFalse(matches_annotation_metadata([.829125], [.828]))
+        # Relative tolerance must not conceal a translation mismatch.
+        self.assertFalse(matches_annotation_metadata([400.01], [400.]))
+
     def test_anisotropic_circle_is_measured_in_mm(self):
         row,col=np.mgrid[:160,:160]
         mask=((row-80)*.5)**2+((col-80)*1.2)**2 <= 20**2

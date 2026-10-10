@@ -22,7 +22,7 @@ def main():
     import matplotlib
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt
-    from medmeasure.geometry import fit_mask
+    from medmeasure.geometry import fit_mask, matches_annotation_metadata
 
     records = [json.loads(line) for line in args.manifest.read_text().splitlines()]
     if not records:
@@ -43,14 +43,14 @@ def main():
                     hashes[str(path)] = sha256(path)
             if image.shape != mask.shape or not np.allclose(image.affine, mask.affine, atol=1e-5):
                 raise ValueError('Image/mask grid mismatch')
-            if list(image.shape) != row['image_size_3d'] or not np.allclose(image.affine, row['affine'], atol=1e-4):
+            if list(image.shape) != row['image_size_3d'] or not matches_annotation_metadata(image.affine, row['affine']):
                 raise ValueError('Image differs from annotation grid')
             if list(nib.aff2axcodes(image.affine)) != row['orientation']:
                 raise ValueError('Orientation differs from annotation')
             if row['slice_dim'] != 2 or row['label'] != 2:
                 raise ValueError('This pilot only supports axial tumor label 2')
             spacing = image.header.get_zooms()[:2]
-            if not np.allclose(spacing, row['pixel_size'], rtol=1e-5):
+            if not matches_annotation_metadata(spacing, row['pixel_size']):
                 raise ValueError('Spacing differs from annotation')
             idx = row['slice_idx']
             image2d = np.asarray(image.dataobj[:, :, idx])
@@ -89,6 +89,7 @@ def main():
     write_json(args.output / 'summary.json', {
         'manifest_sha256': sha256(args.manifest), 'checked': len(results), 'failed': failed,
         'files_sha256': hashes, 'absolute_tolerance_mm': 1e-4, 'relative_tolerance': 1e-5,
+        'annotation_metadata_decimal_places': 3,
         'visual_review_required': True, 'numpy': np.__version__,
         'note': 'Diagnostic native-grid CT window; not the VLM rendered-input preprocessing.',
     })

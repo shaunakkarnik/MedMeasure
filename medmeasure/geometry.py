@@ -9,6 +9,16 @@ import numpy as np
 from scipy.ndimage import label
 
 
+def matches_annotation_metadata(actual, recorded):
+    """Compare headers at the planner's three-decimal metadata precision.
+
+    The small absolute tolerance covers float32 JSON spacing values. Ellipse
+    measurements still use full-precision headers and their own strict check.
+    """
+    return np.allclose(np.round(np.asarray(actual, dtype=float), 3), recorded,
+                       atol=1e-6, rtol=0)
+
+
 def fit_mask(mask, spacing):
     spacing = np.asarray(spacing, dtype=float)
     if mask.ndim != 2 or spacing.shape != (2,) or not np.all(np.isfinite(spacing) & (spacing > 0)):
