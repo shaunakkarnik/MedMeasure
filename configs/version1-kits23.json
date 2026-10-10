@@ -1,0 +1,11 @@
+{
+  "vision_layers": [7, 15, 23, 31],
+  "decoder_dim": 128,
+  "attention_heads": 4,
+  "min_pixels": 200704,
+  "max_pixels": 200704,
+  "question": "Segment the kidney tumor in this axial CT image.",
+  "threshold": 0.5,
+  "learning_rate": 0.0001,
+  "seed": 42
+}

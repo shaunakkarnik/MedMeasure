@@ -1,6 +1,9 @@
 # MedMeasure
 Medical VLM for quantitative measurement tasks
 
+The [Version 1 pilot guide](docs/version1.md) describes the frozen MedVision-V0
+mask decoder, training, small-batch overfitting, and mask-derived evaluation.
+
 See the [project context and plan](docs/project-plan.md) for the research goals, proposed architectures, and implementation sequence.
 
 See [CONTINUITY.md](CONTINUITY.md) for current decisions, progress, and next steps;
