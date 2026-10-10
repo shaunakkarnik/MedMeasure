@@ -4,6 +4,12 @@
   "annotation_version": "1.4.0",
   "benchmark_commit": "45fa8e52684a65da6e1c0ef6ef422d5d4c3e94bd",
   "task": "KiTS23_TumorLesionSize_Task01_Axial-CoT",
+  "loader_source_sha256": "14b49b5d9c5aaffe5f39217756a144ff33a271044b10e0afea29964f0b73a522",
+  "preprocessing_files_sha256": {
+    "datasets/KiTS23/download_fast.py": "42eb71b54a09943b88df8faa7ee4051f805bc9e9a39468a39ddaad9cdc57cebe",
+    "utils/data_conversion.py": "328073bcfdbe18b6e933c2600c50e7f5cfdbd7cda420634b9f81c290306b3c7e",
+    "utils/preprocess_utils.py": "f12cbcbd84af4665fd8ea5c1b1e32d8659dd7a37e29a0b15376666cc83e977d0"
+  },
   "sha256": {
     "benchmark_plan_biometry_v1.4.0.json.gz": "f076a5eca8f6526310c8a8e53dbd052816aab168c0f719bb9a753b6fd7094824",
     "benchmark_plan_biometry_v1.0.0.json.gz": "962921e551dc8ca82822d055d684ac8b33e9df42afe26151d86fed32419646f1",

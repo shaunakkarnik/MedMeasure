@@ -4,6 +4,10 @@ This guide is for a collaborator who already has access to the MedMeasure GitHub
 repository. Use your own Google account and Drive. You do not need access to the
 original operator's Drive to start.
 
+For the newer workflow that prepares scans locally before GPU allocation, follow
+[local CPU → Drive → Colab](local-to-colab.md). The instructions below retain the
+original all-in-Colab route and its pinned notebook version.
+
 The notebook evaluates unchanged MedVision-V0 on **3,179 official KiTS23 v1.4.0
 axial tumor-sizing test examples**, then derives the **825-example/43-case
 legacy-disjoint diagnostic** from the same predictions. Detection is not implemented

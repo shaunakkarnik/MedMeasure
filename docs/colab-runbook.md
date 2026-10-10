@@ -1,5 +1,12 @@
 # Colab baseline
 
+For CPU preparation on a Mac/Linux machine followed by Colab inference from a
+portable Drive bundle, use the [local-to-Colab guide](local-to-colab.md) and
+`notebooks/medvision_v0_kits23_local_data.ipynb`. This runbook retains the original
+all-in-Colab route; portable format-2 bundles can restore to a different root and
+exclude HF Arrow caches, while legacy format-1 backups still require their original
+absolute data path.
+
 Use [the notebook](../notebooks/medvision_v0_kits23_baseline.ipynb) for the existing
 KiTS23 pilot: unchanged MedVision-V0, all 3,179 official v1.4.0 axial sizing test rows,
 and the 825-row/43-case legacy-disjoint diagnostic from the same predictions.

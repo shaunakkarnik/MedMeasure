@@ -57,8 +57,14 @@ def main():
     # Check HF loader ordering and float16 reference conversion against our plan adapter.
     # Offline flags are set by run.sh: missing caches fail rather than updating inputs.
     from datasets import load_dataset
-    loaded = load_dataset('YongchengYAO/MedVision', name='KiTS23_TumorLesionSize_Task01_Axial_Test',
-                          trust_remote_code=True, revision=run['dataset_revision'], split='test')
+    loader_path = run.get('dataset_loader_path')
+    if loader_path:
+        if sha256(loader_path) != lock['loader_source_sha256'] or sha256(loader_path) != run['dataset_loader_sha256']:
+            raise ValueError('Local dataset loader differs from the frozen run')
+    options = {} if loader_path else {'revision':run['dataset_revision']}
+    loaded = load_dataset(loader_path or 'YongchengYAO/MedVision',
+                          name='KiTS23_TumorLesionSize_Task01_Axial_Test',
+                          trust_remote_code=True, split='test', **options)
     if len(loaded) != len(records):
         raise ValueError('HF loader count differs from prepared manifest')
     for index in indices:

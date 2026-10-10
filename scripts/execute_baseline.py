@@ -24,10 +24,15 @@ def main():
     base = Path(medvision_bm.__file__).parent/'medvision_lmms_eval/lmms_eval/tasks/KiTS23/KiTS23_TumorLesionSize_Task01_Axial-CoT.yaml'
     task_dir = args.run/'task_definition'
     task_dir.mkdir(exist_ok=True)
+    loader_path = run.get('dataset_loader_path')
+    dataset_kwargs = {'trust_remote_code': True}
+    if not loader_path:
+        dataset_kwargs['revision'] = run['dataset_revision']
     # JSON is valid YAML, and quoted absolute paths avoid YAML escaping ambiguities.
     (task_dir/'pilot.yaml').write_text(json.dumps({
         'include': str(base), 'task': 'MedMeasure_KiTS23_TL_Axial',
-        'dataset_kwargs': {'trust_remote_code': True, 'revision': run['dataset_revision']},
+        'dataset_path': loader_path or 'YongchengYAO/MedVision',
+        'dataset_kwargs': dataset_kwargs,
     }, indent=2))
     overrides = helper.resolve_qwen25vl_hf_overrides(run['model_path'])
     model_args = ','.join([

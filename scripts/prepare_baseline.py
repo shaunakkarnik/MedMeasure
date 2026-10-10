@@ -37,6 +37,12 @@ def main():
         parser.error('Model paths cannot contain commas (upstream model-argument format)')
     if args.limit < 1:
         parser.error("--limit must be positive")
+    loader = args.data_dir.resolve()/'MedVision.py'
+    loader_hash = None
+    if loader.exists():
+        loader_hash = hashlib.sha256(loader.read_bytes()).hexdigest()
+        if loader_hash != lock['loader_source_sha256']:
+            parser.error('Local dataset loader differs from the pinned revision')
 
     upstream = args.upstream.resolve()
     commit = subprocess.check_output(["git", "-C", str(upstream), "rev-parse", "HEAD"], text=True).strip()
@@ -64,12 +70,16 @@ def main():
         "MedVision_ACK_RELEASE": "1.4.0",
         "MedVision_DISABLE_SAMPLE_FILTERING": "false",
         "MedVision_FORCE_INSTALL_CODE": "False",
+        "MedVision_FORCE_DOWNLOAD_DATA": "False",
+        "MedVision_DOWNLOAD_QC_FIGURES": "False",
         "HF_HUB_OFFLINE": "1",
         "HF_DATASETS_OFFLINE": "1",
     }
     manifest = {
         "status": "prepared_not_run",
         "dataset_revision": "f4040ed7d2d2b45e09c1a996ad2969f2018051d3",
+        "dataset_loader_path": str(loader) if loader_hash else None,
+        "dataset_loader_sha256": loader_hash,
         "model_revision_declared": args.model_revision,
         "model_path": str(args.model_path.resolve()),
         "data_dir": str(args.data_dir.resolve()),

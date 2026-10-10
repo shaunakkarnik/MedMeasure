@@ -82,3 +82,33 @@ class ProcessedDataCache(unittest.TestCase):
                 backup(data, archive, config)
             self.assertFalse(archive.exists())
             self.assertFalse(archive.with_name(archive.name+'.json').exists())
+
+    def test_portable_bundle_relocates_without_absolute_arrow_caches(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            data, config = self.staged_data(root)
+            loader = data/'MedVision.py'
+            loader.write_text('# pinned local loader\n')
+            config['loader_source_sha256'] = hashlib.sha256(loader.read_bytes()).hexdigest()
+            (data/'.downloaded_datasets.json').write_text(json.dumps({'dataset_KiTS23':'1.4.0'}))
+            (data/'src').mkdir()
+            (data/'src/package.py').write_text('# source\n')
+            archive = root/'drive/portable.tar'
+            backup(data, archive, config, portable=True)
+            with tarfile.open(archive) as tar:
+                self.assertFalse(any('/.cache/' in name for name in tar.getnames()))
+            destination = root/'different-runtime-root'
+            restore(destination, archive, config)
+            self.assertTrue((destination/'MedVision.py').is_file())
+            self.assertTrue((destination/'src/package.py').is_file())
+            self.assertFalse((destination/'.cache').exists())
+            self.assertTrue((destination/'Datasets/KiTS23/Images/case_001.nii.gz').is_file())
+
+    def test_legacy_cache_still_refuses_relocation(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            data, config = self.staged_data(root)
+            archive = root/'drive/cache.tar'
+            backup(data, archive, config)
+            with self.assertRaisesRegex(ValueError, 'original data directory'):
+                restore(root/'another-root', archive, config)
