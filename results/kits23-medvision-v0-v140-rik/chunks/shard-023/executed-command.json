@@ -1,0 +1,22 @@
+[
+  "/content/medmeasure-venv/bin/python",
+  "-m",
+  "lmms_eval",
+  "--model",
+  "vllm_qwen25vl",
+  "--model_args",
+  "model_hf=/content/MedVision-V0-7B,tensor_parallel_size=1,max_num_seqs=1,gpu_memory_utilization=0.9,max_new_tokens=4096,dtype=auto,reshape_image_hw=512x512,hf_overrides={\"vision_start_token_id\":151652},system_prompt=[\"A conversation between a User and an Assistant. The User asks a question, and the Assistant solves it. The Assistant first thinks through the reasoning process internally, then provides the User with the answer. The reasoning process and the final answer must be enclosed within <think> </think> and <answer> </answer> tags, respectively. For example: <think> reasoning process here </think> <answer> answer here </answer>. Within the <think> </think> tags, report the reasoning process for each step inside <step-k-reasoning> </step-k-reasoning> tags, followed by the intermediate results in <step-k-answer> </step-k-answer> tags. For example: <think> <step-1-reasoning> reasoning for step 1 </step-1-reasoning> <step-1-answer> intermediate result from step 1 </step-1-answer> </think>.\"]",
+  "--include_path",
+  "/content/drive/MyDrive/MedMeasure/kits23-medvision-v0-v140-rik/evaluation/chunks/shard-023/attempt-001/task_definition",
+  "--tasks",
+  "MedMeasure_KiTS23_TL_Axial",
+  "--batch_size",
+  "1",
+  "--limit",
+  "10",
+  "--log_samples",
+  "--output_path",
+  "/content/drive/MyDrive/MedMeasure/kits23-medvision-v0-v140-rik/evaluation/chunks/shard-023/attempt-001/results",
+  "--sample_indices",
+  "[2300, 2301, 2302, 2303, 2304, 2305, 2306, 2307, 2308, 2309, 2310, 2311, 2312, 2313, 2314, 2315, 2316, 2317, 2318, 2319, 2320, 2321, 2322, 2323, 2324, 2325, 2326, 2327, 2328, 2329, 2330, 2331, 2332, 2333, 2334, 2335, 2336, 2337, 2338, 2339, 2340, 2341, 2342, 2343, 2344, 2345, 2346, 2347, 2348, 2349, 2350, 2351, 2352, 2353, 2354, 2355, 2356, 2357, 2358, 2359, 2360, 2361, 2362, 2363, 2364, 2365, 2366, 2367, 2368, 2369, 2370, 2371, 2372, 2373, 2374, 2375, 2376, 2377, 2378, 2379, 2380, 2381, 2382, 2383, 2384, 2385, 2386, 2387, 2388, 2389, 2390, 2391, 2392, 2393, 2394, 2395, 2396, 2397, 2398, 2399]"
+]

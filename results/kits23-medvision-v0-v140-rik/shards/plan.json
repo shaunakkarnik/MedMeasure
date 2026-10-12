@@ -1,0 +1,13 @@
+{
+  "manifest_sha256": "0698c7e35b9e02ae97cfcf7302dd56120be458095e692ed3ebe22217a006f876",
+  "total_rows": 3179,
+  "shards": 32,
+  "max_rows_per_shard": 100,
+  "case_count": 147,
+  "size_bins": {
+    ">=20mm": 2614,
+    "10-to-20mm": 442,
+    "<10mm": 123
+  },
+  "note": "All manifest rows included exactly once; job boundaries are not statistical partitions."
+}

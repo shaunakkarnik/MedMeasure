@@ -1,0 +1,46 @@
+{
+  "groups": {
+    "all": {
+      "total": 100,
+      "finite_successes": 100,
+      "failures": 0,
+      "mae_mm_success_only": 7.918083415031433,
+      "mre_fraction_success_only": 0.5610380991583521,
+      "success_fraction": 1.0,
+      "below_10_percent_fraction_all_rows": 0.29,
+      "below_10_percent_fraction_success_only": 0.29
+    },
+    "<10mm": {
+      "total": 4,
+      "finite_successes": 4,
+      "failures": 0,
+      "mae_mm_success_only": 22.480361461639404,
+      "mre_fraction_success_only": 4.07622047757392,
+      "success_fraction": 1.0,
+      "below_10_percent_fraction_all_rows": 0.0,
+      "below_10_percent_fraction_success_only": 0.0
+    },
+    "10-to-20mm": {
+      "total": 23,
+      "finite_successes": 23,
+      "failures": 0,
+      "mae_mm_success_only": 14.177791429602582,
+      "mre_fraction_success_only": 1.1227941174015745,
+      "success_fraction": 1.0,
+      "below_10_percent_fraction_all_rows": 0.0,
+      "below_10_percent_fraction_success_only": 0.0
+    },
+    ">=20mm": {
+      "total": 73,
+      "finite_successes": 73,
+      "failures": 0,
+      "mae_mm_success_only": 5.147913599667484,
+      "mre_fraction_success_only": 0.19143374390826462,
+      "success_fraction": 1.0,
+      "below_10_percent_fraction_all_rows": 0.3972602739726027,
+      "below_10_percent_fraction_success_only": 0.3972602739726027
+    }
+  },
+  "definition": "Per-row MRE averages relative error over major/minor axes; threshold is strictly <0.1.",
+  "note": "Uses upstream parsed metrics. Nonfinite scores count as failures here; keep upstream aggregate outputs too."
+}

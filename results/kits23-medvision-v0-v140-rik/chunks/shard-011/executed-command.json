@@ -1,0 +1,22 @@
+[
+  "/content/medmeasure-venv/bin/python",
+  "-m",
+  "lmms_eval",
+  "--model",
+  "vllm_qwen25vl",
+  "--model_args",
+  "model_hf=/content/MedVision-V0-7B,tensor_parallel_size=1,max_num_seqs=1,gpu_memory_utilization=0.9,max_new_tokens=4096,dtype=auto,reshape_image_hw=512x512,hf_overrides={\"vision_start_token_id\":151652},system_prompt=[\"A conversation between a User and an Assistant. The User asks a question, and the Assistant solves it. The Assistant first thinks through the reasoning process internally, then provides the User with the answer. The reasoning process and the final answer must be enclosed within <think> </think> and <answer> </answer> tags, respectively. For example: <think> reasoning process here </think> <answer> answer here </answer>. Within the <think> </think> tags, report the reasoning process for each step inside <step-k-reasoning> </step-k-reasoning> tags, followed by the intermediate results in <step-k-answer> </step-k-answer> tags. For example: <think> <step-1-reasoning> reasoning for step 1 </step-1-reasoning> <step-1-answer> intermediate result from step 1 </step-1-answer> </think>.\"]",
+  "--include_path",
+  "/content/drive/MyDrive/MedMeasure/kits23-medvision-v0-v140-rik/evaluation/chunks/shard-011/attempt-001/task_definition",
+  "--tasks",
+  "MedMeasure_KiTS23_TL_Axial",
+  "--batch_size",
+  "1",
+  "--limit",
+  "10",
+  "--log_samples",
+  "--output_path",
+  "/content/drive/MyDrive/MedMeasure/kits23-medvision-v0-v140-rik/evaluation/chunks/shard-011/attempt-001/results",
+  "--sample_indices",
+  "[1100, 1101, 1102, 1103, 1104, 1105, 1106, 1107, 1108, 1109, 1110, 1111, 1112, 1113, 1114, 1115, 1116, 1117, 1118, 1119, 1120, 1121, 1122, 1123, 1124, 1125, 1126, 1127, 1128, 1129, 1130, 1131, 1132, 1133, 1134, 1135, 1136, 1137, 1138, 1139, 1140, 1141, 1142, 1143, 1144, 1145, 1146, 1147, 1148, 1149, 1150, 1151, 1152, 1153, 1154, 1155, 1156, 1157, 1158, 1159, 1160, 1161, 1162, 1163, 1164, 1165, 1166, 1167, 1168, 1169, 1170, 1171, 1172, 1173, 1174, 1175, 1176, 1177, 1178, 1179, 1180, 1181, 1182, 1183, 1184, 1185, 1186, 1187, 1188, 1189, 1190, 1191, 1192, 1193, 1194, 1195, 1196, 1197, 1198, 1199]"
+]

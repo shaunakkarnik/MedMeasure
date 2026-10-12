@@ -1,0 +1,5902 @@
+[
+  {
+    "sample_id": "KiTS23:case_00271:2:254:2",
+    "case_id": "case_00271",
+    "official_split": "test",
+    "loader_index": 800,
+    "slice_dim": 2,
+    "slice_idx": 254,
+    "label": 2,
+    "image_file": "Images/case_00271.nii.gz",
+    "mask_file": "Masks/case_00271.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00271.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      468
+    ],
+    "pixel_size": [
+      0.6050000190734863,
+      0.6050000190734863
+    ],
+    "voxel_size": [
+      0.6050000190734863,
+      0.6050000190734863,
+      0.5
+    ],
+    "affine": [
+      [
+        0.605,
+        0.0,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.605,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.0,
+        0.5,
+        -233.5
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 55.85344696044922,
+    "minor_mm": 47.55324935913086
+  },
+  {
+    "sample_id": "KiTS23:case_00271:2:255:2",
+    "case_id": "case_00271",
+    "official_split": "test",
+    "loader_index": 801,
+    "slice_dim": 2,
+    "slice_idx": 255,
+    "label": 2,
+    "image_file": "Images/case_00271.nii.gz",
+    "mask_file": "Masks/case_00271.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00271.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      468
+    ],
+    "pixel_size": [
+      0.6050000190734863,
+      0.6050000190734863
+    ],
+    "voxel_size": [
+      0.6050000190734863,
+      0.6050000190734863,
+      0.5
+    ],
+    "affine": [
+      [
+        0.605,
+        0.0,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.605,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.0,
+        0.5,
+        -233.5
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 55.3763427734375,
+    "minor_mm": 47.58588790893555
+  },
+  {
+    "sample_id": "KiTS23:case_00271:2:256:2",
+    "case_id": "case_00271",
+    "official_split": "test",
+    "loader_index": 802,
+    "slice_dim": 2,
+    "slice_idx": 256,
+    "label": 2,
+    "image_file": "Images/case_00271.nii.gz",
+    "mask_file": "Masks/case_00271.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00271.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      468
+    ],
+    "pixel_size": [
+      0.6050000190734863,
+      0.6050000190734863
+    ],
+    "voxel_size": [
+      0.6050000190734863,
+      0.6050000190734863,
+      0.5
+    ],
+    "affine": [
+      [
+        0.605,
+        0.0,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.605,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.0,
+        0.5,
+        -233.5
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 55.21601867675781,
+    "minor_mm": 47.89637756347656
+  },
+  {
+    "sample_id": "KiTS23:case_00271:2:257:2",
+    "case_id": "case_00271",
+    "official_split": "test",
+    "loader_index": 803,
+    "slice_dim": 2,
+    "slice_idx": 257,
+    "label": 2,
+    "image_file": "Images/case_00271.nii.gz",
+    "mask_file": "Masks/case_00271.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00271.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      468
+    ],
+    "pixel_size": [
+      0.6050000190734863,
+      0.6050000190734863
+    ],
+    "voxel_size": [
+      0.6050000190734863,
+      0.6050000190734863,
+      0.5
+    ],
+    "affine": [
+      [
+        0.605,
+        0.0,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.605,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.0,
+        0.5,
+        -233.5
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 55.44404602050781,
+    "minor_mm": 48.266151428222656
+  },
+  {
+    "sample_id": "KiTS23:case_00271:2:258:2",
+    "case_id": "case_00271",
+    "official_split": "test",
+    "loader_index": 804,
+    "slice_dim": 2,
+    "slice_idx": 258,
+    "label": 2,
+    "image_file": "Images/case_00271.nii.gz",
+    "mask_file": "Masks/case_00271.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00271.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      468
+    ],
+    "pixel_size": [
+      0.6050000190734863,
+      0.6050000190734863
+    ],
+    "voxel_size": [
+      0.6050000190734863,
+      0.6050000190734863,
+      0.5
+    ],
+    "affine": [
+      [
+        0.605,
+        0.0,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.605,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.0,
+        0.5,
+        -233.5
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 54.7322883605957,
+    "minor_mm": 47.239444732666016
+  },
+  {
+    "sample_id": "KiTS23:case_00271:2:259:2",
+    "case_id": "case_00271",
+    "official_split": "test",
+    "loader_index": 805,
+    "slice_dim": 2,
+    "slice_idx": 259,
+    "label": 2,
+    "image_file": "Images/case_00271.nii.gz",
+    "mask_file": "Masks/case_00271.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00271.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      468
+    ],
+    "pixel_size": [
+      0.6050000190734863,
+      0.6050000190734863
+    ],
+    "voxel_size": [
+      0.6050000190734863,
+      0.6050000190734863,
+      0.5
+    ],
+    "affine": [
+      [
+        0.605,
+        0.0,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.605,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.0,
+        0.5,
+        -233.5
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 54.512855529785156,
+    "minor_mm": 46.87437057495117
+  },
+  {
+    "sample_id": "KiTS23:case_00271:2:260:2",
+    "case_id": "case_00271",
+    "official_split": "test",
+    "loader_index": 806,
+    "slice_dim": 2,
+    "slice_idx": 260,
+    "label": 2,
+    "image_file": "Images/case_00271.nii.gz",
+    "mask_file": "Masks/case_00271.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00271.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      468
+    ],
+    "pixel_size": [
+      0.6050000190734863,
+      0.6050000190734863
+    ],
+    "voxel_size": [
+      0.6050000190734863,
+      0.6050000190734863,
+      0.5
+    ],
+    "affine": [
+      [
+        0.605,
+        0.0,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.605,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.0,
+        0.5,
+        -233.5
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 54.84521484375,
+    "minor_mm": 46.199607849121094
+  },
+  {
+    "sample_id": "KiTS23:case_00271:2:261:2",
+    "case_id": "case_00271",
+    "official_split": "test",
+    "loader_index": 807,
+    "slice_dim": 2,
+    "slice_idx": 261,
+    "label": 2,
+    "image_file": "Images/case_00271.nii.gz",
+    "mask_file": "Masks/case_00271.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00271.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      468
+    ],
+    "pixel_size": [
+      0.6050000190734863,
+      0.6050000190734863
+    ],
+    "voxel_size": [
+      0.6050000190734863,
+      0.6050000190734863,
+      0.5
+    ],
+    "affine": [
+      [
+        0.605,
+        0.0,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.605,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.0,
+        0.5,
+        -233.5
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 53.88364028930664,
+    "minor_mm": 45.380714416503906
+  },
+  {
+    "sample_id": "KiTS23:case_00271:2:262:2",
+    "case_id": "case_00271",
+    "official_split": "test",
+    "loader_index": 808,
+    "slice_dim": 2,
+    "slice_idx": 262,
+    "label": 2,
+    "image_file": "Images/case_00271.nii.gz",
+    "mask_file": "Masks/case_00271.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00271.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      468
+    ],
+    "pixel_size": [
+      0.6050000190734863,
+      0.6050000190734863
+    ],
+    "voxel_size": [
+      0.6050000190734863,
+      0.6050000190734863,
+      0.5
+    ],
+    "affine": [
+      [
+        0.605,
+        0.0,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.605,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.0,
+        0.5,
+        -233.5
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 53.85129928588867,
+    "minor_mm": 44.73154067993164
+  },
+  {
+    "sample_id": "KiTS23:case_00271:2:263:2",
+    "case_id": "case_00271",
+    "official_split": "test",
+    "loader_index": 809,
+    "slice_dim": 2,
+    "slice_idx": 263,
+    "label": 2,
+    "image_file": "Images/case_00271.nii.gz",
+    "mask_file": "Masks/case_00271.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00271.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      468
+    ],
+    "pixel_size": [
+      0.6050000190734863,
+      0.6050000190734863
+    ],
+    "voxel_size": [
+      0.6050000190734863,
+      0.6050000190734863,
+      0.5
+    ],
+    "affine": [
+      [
+        0.605,
+        0.0,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.605,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.0,
+        0.5,
+        -233.5
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 54.067630767822266,
+    "minor_mm": 44.14643478393555
+  },
+  {
+    "sample_id": "KiTS23:case_00271:2:264:2",
+    "case_id": "case_00271",
+    "official_split": "test",
+    "loader_index": 810,
+    "slice_dim": 2,
+    "slice_idx": 264,
+    "label": 2,
+    "image_file": "Images/case_00271.nii.gz",
+    "mask_file": "Masks/case_00271.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00271.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      468
+    ],
+    "pixel_size": [
+      0.6050000190734863,
+      0.6050000190734863
+    ],
+    "voxel_size": [
+      0.6050000190734863,
+      0.6050000190734863,
+      0.5
+    ],
+    "affine": [
+      [
+        0.605,
+        0.0,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.605,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.0,
+        0.5,
+        -233.5
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 53.18499755859375,
+    "minor_mm": 43.43100357055664
+  },
+  {
+    "sample_id": "KiTS23:case_00271:2:265:2",
+    "case_id": "case_00271",
+    "official_split": "test",
+    "loader_index": 811,
+    "slice_dim": 2,
+    "slice_idx": 265,
+    "label": 2,
+    "image_file": "Images/case_00271.nii.gz",
+    "mask_file": "Masks/case_00271.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00271.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      468
+    ],
+    "pixel_size": [
+      0.6050000190734863,
+      0.6050000190734863
+    ],
+    "voxel_size": [
+      0.6050000190734863,
+      0.6050000190734863,
+      0.5
+    ],
+    "affine": [
+      [
+        0.605,
+        0.0,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.605,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.0,
+        0.5,
+        -233.5
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 52.72953796386719,
+    "minor_mm": 43.18375015258789
+  },
+  {
+    "sample_id": "KiTS23:case_00271:2:266:2",
+    "case_id": "case_00271",
+    "official_split": "test",
+    "loader_index": 812,
+    "slice_dim": 2,
+    "slice_idx": 266,
+    "label": 2,
+    "image_file": "Images/case_00271.nii.gz",
+    "mask_file": "Masks/case_00271.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00271.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      468
+    ],
+    "pixel_size": [
+      0.6050000190734863,
+      0.6050000190734863
+    ],
+    "voxel_size": [
+      0.6050000190734863,
+      0.6050000190734863,
+      0.5
+    ],
+    "affine": [
+      [
+        0.605,
+        0.0,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.605,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.0,
+        0.5,
+        -233.5
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 52.50901794433594,
+    "minor_mm": 42.87545394897461
+  },
+  {
+    "sample_id": "KiTS23:case_00271:2:267:2",
+    "case_id": "case_00271",
+    "official_split": "test",
+    "loader_index": 813,
+    "slice_dim": 2,
+    "slice_idx": 267,
+    "label": 2,
+    "image_file": "Images/case_00271.nii.gz",
+    "mask_file": "Masks/case_00271.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00271.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      468
+    ],
+    "pixel_size": [
+      0.6050000190734863,
+      0.6050000190734863
+    ],
+    "voxel_size": [
+      0.6050000190734863,
+      0.6050000190734863,
+      0.5
+    ],
+    "affine": [
+      [
+        0.605,
+        0.0,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.605,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.0,
+        0.5,
+        -233.5
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 51.52716827392578,
+    "minor_mm": 42.07955551147461
+  },
+  {
+    "sample_id": "KiTS23:case_00271:2:268:2",
+    "case_id": "case_00271",
+    "official_split": "test",
+    "loader_index": 814,
+    "slice_dim": 2,
+    "slice_idx": 268,
+    "label": 2,
+    "image_file": "Images/case_00271.nii.gz",
+    "mask_file": "Masks/case_00271.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00271.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      468
+    ],
+    "pixel_size": [
+      0.6050000190734863,
+      0.6050000190734863
+    ],
+    "voxel_size": [
+      0.6050000190734863,
+      0.6050000190734863,
+      0.5
+    ],
+    "affine": [
+      [
+        0.605,
+        0.0,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.605,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.0,
+        0.5,
+        -233.5
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 50.93701171875,
+    "minor_mm": 41.80350112915039
+  },
+  {
+    "sample_id": "KiTS23:case_00271:2:269:2",
+    "case_id": "case_00271",
+    "official_split": "test",
+    "loader_index": 815,
+    "slice_dim": 2,
+    "slice_idx": 269,
+    "label": 2,
+    "image_file": "Images/case_00271.nii.gz",
+    "mask_file": "Masks/case_00271.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00271.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      468
+    ],
+    "pixel_size": [
+      0.6050000190734863,
+      0.6050000190734863
+    ],
+    "voxel_size": [
+      0.6050000190734863,
+      0.6050000190734863,
+      0.5
+    ],
+    "affine": [
+      [
+        0.605,
+        0.0,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.605,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.0,
+        0.5,
+        -233.5
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 50.73642349243164,
+    "minor_mm": 41.51695251464844
+  },
+  {
+    "sample_id": "KiTS23:case_00271:2:270:2",
+    "case_id": "case_00271",
+    "official_split": "test",
+    "loader_index": 816,
+    "slice_dim": 2,
+    "slice_idx": 270,
+    "label": 2,
+    "image_file": "Images/case_00271.nii.gz",
+    "mask_file": "Masks/case_00271.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00271.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      468
+    ],
+    "pixel_size": [
+      0.6050000190734863,
+      0.6050000190734863
+    ],
+    "voxel_size": [
+      0.6050000190734863,
+      0.6050000190734863,
+      0.5
+    ],
+    "affine": [
+      [
+        0.605,
+        0.0,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.605,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.0,
+        0.5,
+        -233.5
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 49.47686004638672,
+    "minor_mm": 40.47308349609375
+  },
+  {
+    "sample_id": "KiTS23:case_00271:2:271:2",
+    "case_id": "case_00271",
+    "official_split": "test",
+    "loader_index": 817,
+    "slice_dim": 2,
+    "slice_idx": 271,
+    "label": 2,
+    "image_file": "Images/case_00271.nii.gz",
+    "mask_file": "Masks/case_00271.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00271.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      468
+    ],
+    "pixel_size": [
+      0.6050000190734863,
+      0.6050000190734863
+    ],
+    "voxel_size": [
+      0.6050000190734863,
+      0.6050000190734863,
+      0.5
+    ],
+    "affine": [
+      [
+        0.605,
+        0.0,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.605,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.0,
+        0.5,
+        -233.5
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 48.932498931884766,
+    "minor_mm": 40.084686279296875
+  },
+  {
+    "sample_id": "KiTS23:case_00271:2:272:2",
+    "case_id": "case_00271",
+    "official_split": "test",
+    "loader_index": 818,
+    "slice_dim": 2,
+    "slice_idx": 272,
+    "label": 2,
+    "image_file": "Images/case_00271.nii.gz",
+    "mask_file": "Masks/case_00271.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00271.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      468
+    ],
+    "pixel_size": [
+      0.6050000190734863,
+      0.6050000190734863
+    ],
+    "voxel_size": [
+      0.6050000190734863,
+      0.6050000190734863,
+      0.5
+    ],
+    "affine": [
+      [
+        0.605,
+        0.0,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.605,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.0,
+        0.5,
+        -233.5
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 48.90769958496094,
+    "minor_mm": 39.676761627197266
+  },
+  {
+    "sample_id": "KiTS23:case_00271:2:273:2",
+    "case_id": "case_00271",
+    "official_split": "test",
+    "loader_index": 819,
+    "slice_dim": 2,
+    "slice_idx": 273,
+    "label": 2,
+    "image_file": "Images/case_00271.nii.gz",
+    "mask_file": "Masks/case_00271.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00271.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      468
+    ],
+    "pixel_size": [
+      0.6050000190734863,
+      0.6050000190734863
+    ],
+    "voxel_size": [
+      0.6050000190734863,
+      0.6050000190734863,
+      0.5
+    ],
+    "affine": [
+      [
+        0.605,
+        0.0,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.605,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.0,
+        0.5,
+        -233.5
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 47.60310363769531,
+    "minor_mm": 38.78182601928711
+  },
+  {
+    "sample_id": "KiTS23:case_00271:2:274:2",
+    "case_id": "case_00271",
+    "official_split": "test",
+    "loader_index": 820,
+    "slice_dim": 2,
+    "slice_idx": 274,
+    "label": 2,
+    "image_file": "Images/case_00271.nii.gz",
+    "mask_file": "Masks/case_00271.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00271.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      468
+    ],
+    "pixel_size": [
+      0.6050000190734863,
+      0.6050000190734863
+    ],
+    "voxel_size": [
+      0.6050000190734863,
+      0.6050000190734863,
+      0.5
+    ],
+    "affine": [
+      [
+        0.605,
+        0.0,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.605,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.0,
+        0.5,
+        -233.5
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 46.793548583984375,
+    "minor_mm": 38.165531158447266
+  },
+  {
+    "sample_id": "KiTS23:case_00271:2:275:2",
+    "case_id": "case_00271",
+    "official_split": "test",
+    "loader_index": 821,
+    "slice_dim": 2,
+    "slice_idx": 275,
+    "label": 2,
+    "image_file": "Images/case_00271.nii.gz",
+    "mask_file": "Masks/case_00271.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00271.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      468
+    ],
+    "pixel_size": [
+      0.6050000190734863,
+      0.6050000190734863
+    ],
+    "voxel_size": [
+      0.6050000190734863,
+      0.6050000190734863,
+      0.5
+    ],
+    "affine": [
+      [
+        0.605,
+        0.0,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.605,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.0,
+        0.5,
+        -233.5
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 46.334861755371094,
+    "minor_mm": 37.758331298828125
+  },
+  {
+    "sample_id": "KiTS23:case_00271:2:276:2",
+    "case_id": "case_00271",
+    "official_split": "test",
+    "loader_index": 822,
+    "slice_dim": 2,
+    "slice_idx": 276,
+    "label": 2,
+    "image_file": "Images/case_00271.nii.gz",
+    "mask_file": "Masks/case_00271.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00271.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      468
+    ],
+    "pixel_size": [
+      0.6050000190734863,
+      0.6050000190734863
+    ],
+    "voxel_size": [
+      0.6050000190734863,
+      0.6050000190734863,
+      0.5
+    ],
+    "affine": [
+      [
+        0.605,
+        0.0,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.605,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.0,
+        0.5,
+        -233.5
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 45.38250732421875,
+    "minor_mm": 36.95243453979492
+  },
+  {
+    "sample_id": "KiTS23:case_00271:2:277:2",
+    "case_id": "case_00271",
+    "official_split": "test",
+    "loader_index": 823,
+    "slice_dim": 2,
+    "slice_idx": 277,
+    "label": 2,
+    "image_file": "Images/case_00271.nii.gz",
+    "mask_file": "Masks/case_00271.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00271.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      468
+    ],
+    "pixel_size": [
+      0.6050000190734863,
+      0.6050000190734863
+    ],
+    "voxel_size": [
+      0.6050000190734863,
+      0.6050000190734863,
+      0.5
+    ],
+    "affine": [
+      [
+        0.605,
+        0.0,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.605,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.0,
+        0.5,
+        -233.5
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 44.60296630859375,
+    "minor_mm": 36.691009521484375
+  },
+  {
+    "sample_id": "KiTS23:case_00271:2:278:2",
+    "case_id": "case_00271",
+    "official_split": "test",
+    "loader_index": 824,
+    "slice_dim": 2,
+    "slice_idx": 278,
+    "label": 2,
+    "image_file": "Images/case_00271.nii.gz",
+    "mask_file": "Masks/case_00271.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00271.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      468
+    ],
+    "pixel_size": [
+      0.6050000190734863,
+      0.6050000190734863
+    ],
+    "voxel_size": [
+      0.6050000190734863,
+      0.6050000190734863,
+      0.5
+    ],
+    "affine": [
+      [
+        0.605,
+        0.0,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.605,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.0,
+        0.5,
+        -233.5
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 44.3643798828125,
+    "minor_mm": 36.510555267333984
+  },
+  {
+    "sample_id": "KiTS23:case_00271:2:279:2",
+    "case_id": "case_00271",
+    "official_split": "test",
+    "loader_index": 825,
+    "slice_dim": 2,
+    "slice_idx": 279,
+    "label": 2,
+    "image_file": "Images/case_00271.nii.gz",
+    "mask_file": "Masks/case_00271.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00271.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      468
+    ],
+    "pixel_size": [
+      0.6050000190734863,
+      0.6050000190734863
+    ],
+    "voxel_size": [
+      0.6050000190734863,
+      0.6050000190734863,
+      0.5
+    ],
+    "affine": [
+      [
+        0.605,
+        0.0,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.605,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.0,
+        0.5,
+        -233.5
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 42.94721984863281,
+    "minor_mm": 35.74383544921875
+  },
+  {
+    "sample_id": "KiTS23:case_00271:2:280:2",
+    "case_id": "case_00271",
+    "official_split": "test",
+    "loader_index": 826,
+    "slice_dim": 2,
+    "slice_idx": 280,
+    "label": 2,
+    "image_file": "Images/case_00271.nii.gz",
+    "mask_file": "Masks/case_00271.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00271.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      468
+    ],
+    "pixel_size": [
+      0.6050000190734863,
+      0.6050000190734863
+    ],
+    "voxel_size": [
+      0.6050000190734863,
+      0.6050000190734863,
+      0.5
+    ],
+    "affine": [
+      [
+        0.605,
+        0.0,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.605,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.0,
+        0.5,
+        -233.5
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 42.10108947753906,
+    "minor_mm": 35.52109909057617
+  },
+  {
+    "sample_id": "KiTS23:case_00271:2:281:2",
+    "case_id": "case_00271",
+    "official_split": "test",
+    "loader_index": 827,
+    "slice_dim": 2,
+    "slice_idx": 281,
+    "label": 2,
+    "image_file": "Images/case_00271.nii.gz",
+    "mask_file": "Masks/case_00271.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00271.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      468
+    ],
+    "pixel_size": [
+      0.6050000190734863,
+      0.6050000190734863
+    ],
+    "voxel_size": [
+      0.6050000190734863,
+      0.6050000190734863,
+      0.5
+    ],
+    "affine": [
+      [
+        0.605,
+        0.0,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.605,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.0,
+        0.5,
+        -233.5
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 41.84934616088867,
+    "minor_mm": 35.40375518798828
+  },
+  {
+    "sample_id": "KiTS23:case_00271:2:282:2",
+    "case_id": "case_00271",
+    "official_split": "test",
+    "loader_index": 828,
+    "slice_dim": 2,
+    "slice_idx": 282,
+    "label": 2,
+    "image_file": "Images/case_00271.nii.gz",
+    "mask_file": "Masks/case_00271.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00271.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      468
+    ],
+    "pixel_size": [
+      0.6050000190734863,
+      0.6050000190734863
+    ],
+    "voxel_size": [
+      0.6050000190734863,
+      0.6050000190734863,
+      0.5
+    ],
+    "affine": [
+      [
+        0.605,
+        0.0,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.605,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.0,
+        0.5,
+        -233.5
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 39.95505142211914,
+    "minor_mm": 34.120948791503906
+  },
+  {
+    "sample_id": "KiTS23:case_00271:2:283:2",
+    "case_id": "case_00271",
+    "official_split": "test",
+    "loader_index": 829,
+    "slice_dim": 2,
+    "slice_idx": 283,
+    "label": 2,
+    "image_file": "Images/case_00271.nii.gz",
+    "mask_file": "Masks/case_00271.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00271.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      468
+    ],
+    "pixel_size": [
+      0.6050000190734863,
+      0.6050000190734863
+    ],
+    "voxel_size": [
+      0.6050000190734863,
+      0.6050000190734863,
+      0.5
+    ],
+    "affine": [
+      [
+        0.605,
+        0.0,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.605,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.0,
+        0.5,
+        -233.5
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 38.752559661865234,
+    "minor_mm": 33.31550216674805
+  },
+  {
+    "sample_id": "KiTS23:case_00271:2:284:2",
+    "case_id": "case_00271",
+    "official_split": "test",
+    "loader_index": 830,
+    "slice_dim": 2,
+    "slice_idx": 284,
+    "label": 2,
+    "image_file": "Images/case_00271.nii.gz",
+    "mask_file": "Masks/case_00271.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00271.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      468
+    ],
+    "pixel_size": [
+      0.6050000190734863,
+      0.6050000190734863
+    ],
+    "voxel_size": [
+      0.6050000190734863,
+      0.6050000190734863,
+      0.5
+    ],
+    "affine": [
+      [
+        0.605,
+        0.0,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.605,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.0,
+        0.5,
+        -233.5
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 38.11397933959961,
+    "minor_mm": 33.13967514038086
+  },
+  {
+    "sample_id": "KiTS23:case_00271:2:285:2",
+    "case_id": "case_00271",
+    "official_split": "test",
+    "loader_index": 831,
+    "slice_dim": 2,
+    "slice_idx": 285,
+    "label": 2,
+    "image_file": "Images/case_00271.nii.gz",
+    "mask_file": "Masks/case_00271.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00271.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      468
+    ],
+    "pixel_size": [
+      0.6050000190734863,
+      0.6050000190734863
+    ],
+    "voxel_size": [
+      0.6050000190734863,
+      0.6050000190734863,
+      0.5
+    ],
+    "affine": [
+      [
+        0.605,
+        0.0,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.605,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.0,
+        0.5,
+        -233.5
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 34.99177932739258,
+    "minor_mm": 31.72662925720215
+  },
+  {
+    "sample_id": "KiTS23:case_00271:2:286:2",
+    "case_id": "case_00271",
+    "official_split": "test",
+    "loader_index": 832,
+    "slice_dim": 2,
+    "slice_idx": 286,
+    "label": 2,
+    "image_file": "Images/case_00271.nii.gz",
+    "mask_file": "Masks/case_00271.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00271.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      468
+    ],
+    "pixel_size": [
+      0.6050000190734863,
+      0.6050000190734863
+    ],
+    "voxel_size": [
+      0.6050000190734863,
+      0.6050000190734863,
+      0.5
+    ],
+    "affine": [
+      [
+        0.605,
+        0.0,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.605,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.0,
+        0.5,
+        -233.5
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 34.38632583618164,
+    "minor_mm": 29.166624069213867
+  },
+  {
+    "sample_id": "KiTS23:case_00271:2:287:2",
+    "case_id": "case_00271",
+    "official_split": "test",
+    "loader_index": 833,
+    "slice_dim": 2,
+    "slice_idx": 287,
+    "label": 2,
+    "image_file": "Images/case_00271.nii.gz",
+    "mask_file": "Masks/case_00271.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00271.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      468
+    ],
+    "pixel_size": [
+      0.6050000190734863,
+      0.6050000190734863
+    ],
+    "voxel_size": [
+      0.6050000190734863,
+      0.6050000190734863,
+      0.5
+    ],
+    "affine": [
+      [
+        0.605,
+        0.0,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.605,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.0,
+        0.5,
+        -233.5
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 34.77439498901367,
+    "minor_mm": 27.079330444335938
+  },
+  {
+    "sample_id": "KiTS23:case_00271:2:288:2",
+    "case_id": "case_00271",
+    "official_split": "test",
+    "loader_index": 834,
+    "slice_dim": 2,
+    "slice_idx": 288,
+    "label": 2,
+    "image_file": "Images/case_00271.nii.gz",
+    "mask_file": "Masks/case_00271.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00271.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      468
+    ],
+    "pixel_size": [
+      0.6050000190734863,
+      0.6050000190734863
+    ],
+    "voxel_size": [
+      0.6050000190734863,
+      0.6050000190734863,
+      0.5
+    ],
+    "affine": [
+      [
+        0.605,
+        0.0,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.605,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.0,
+        0.5,
+        -233.5
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 29.248571395874023,
+    "minor_mm": 23.455690383911133
+  },
+  {
+    "sample_id": "KiTS23:case_00271:2:289:2",
+    "case_id": "case_00271",
+    "official_split": "test",
+    "loader_index": 835,
+    "slice_dim": 2,
+    "slice_idx": 289,
+    "label": 2,
+    "image_file": "Images/case_00271.nii.gz",
+    "mask_file": "Masks/case_00271.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00271.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      468
+    ],
+    "pixel_size": [
+      0.6050000190734863,
+      0.6050000190734863
+    ],
+    "voxel_size": [
+      0.6050000190734863,
+      0.6050000190734863,
+      0.5
+    ],
+    "affine": [
+      [
+        0.605,
+        0.0,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.605,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.0,
+        0.5,
+        -233.5
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 24.549522399902344,
+    "minor_mm": 20.506702423095703
+  },
+  {
+    "sample_id": "KiTS23:case_00271:2:290:2",
+    "case_id": "case_00271",
+    "official_split": "test",
+    "loader_index": 836,
+    "slice_dim": 2,
+    "slice_idx": 290,
+    "label": 2,
+    "image_file": "Images/case_00271.nii.gz",
+    "mask_file": "Masks/case_00271.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00271.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      468
+    ],
+    "pixel_size": [
+      0.6050000190734863,
+      0.6050000190734863
+    ],
+    "voxel_size": [
+      0.6050000190734863,
+      0.6050000190734863,
+      0.5
+    ],
+    "affine": [
+      [
+        0.605,
+        0.0,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.605,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.0,
+        0.5,
+        -233.5
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 21.14279556274414,
+    "minor_mm": 18.070663452148438
+  },
+  {
+    "sample_id": "KiTS23:case_00271:2:291:2",
+    "case_id": "case_00271",
+    "official_split": "test",
+    "loader_index": 837,
+    "slice_dim": 2,
+    "slice_idx": 291,
+    "label": 2,
+    "image_file": "Images/case_00271.nii.gz",
+    "mask_file": "Masks/case_00271.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00271.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      468
+    ],
+    "pixel_size": [
+      0.6050000190734863,
+      0.6050000190734863
+    ],
+    "voxel_size": [
+      0.6050000190734863,
+      0.6050000190734863,
+      0.5
+    ],
+    "affine": [
+      [
+        0.605,
+        0.0,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.605,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.0,
+        0.5,
+        -233.5
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 16.874998092651367,
+    "minor_mm": 14.677742004394531
+  },
+  {
+    "sample_id": "KiTS23:case_00271:2:292:2",
+    "case_id": "case_00271",
+    "official_split": "test",
+    "loader_index": 838,
+    "slice_dim": 2,
+    "slice_idx": 292,
+    "label": 2,
+    "image_file": "Images/case_00271.nii.gz",
+    "mask_file": "Masks/case_00271.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00271.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      468
+    ],
+    "pixel_size": [
+      0.6050000190734863,
+      0.6050000190734863
+    ],
+    "voxel_size": [
+      0.6050000190734863,
+      0.6050000190734863,
+      0.5
+    ],
+    "affine": [
+      [
+        0.605,
+        0.0,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.605,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.0,
+        0.5,
+        -233.5
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 13.862504959106445,
+    "minor_mm": 12.170458793640137
+  },
+  {
+    "sample_id": "KiTS23:case_00271:2:293:2",
+    "case_id": "case_00271",
+    "official_split": "test",
+    "loader_index": 839,
+    "slice_dim": 2,
+    "slice_idx": 293,
+    "label": 2,
+    "image_file": "Images/case_00271.nii.gz",
+    "mask_file": "Masks/case_00271.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00271.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      468
+    ],
+    "pixel_size": [
+      0.6050000190734863,
+      0.6050000190734863
+    ],
+    "voxel_size": [
+      0.6050000190734863,
+      0.6050000190734863,
+      0.5
+    ],
+    "affine": [
+      [
+        0.605,
+        0.0,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.605,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.0,
+        0.5,
+        -233.5
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 11.846911430358887,
+    "minor_mm": 9.943155288696289
+  },
+  {
+    "sample_id": "KiTS23:case_00271:2:294:2",
+    "case_id": "case_00271",
+    "official_split": "test",
+    "loader_index": 840,
+    "slice_dim": 2,
+    "slice_idx": 294,
+    "label": 2,
+    "image_file": "Images/case_00271.nii.gz",
+    "mask_file": "Masks/case_00271.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00271.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      468
+    ],
+    "pixel_size": [
+      0.6050000190734863,
+      0.6050000190734863
+    ],
+    "voxel_size": [
+      0.6050000190734863,
+      0.6050000190734863,
+      0.5
+    ],
+    "affine": [
+      [
+        0.605,
+        0.0,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.605,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.0,
+        0.5,
+        -233.5
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 7.388845920562744,
+    "minor_mm": 6.044494152069092
+  },
+  {
+    "sample_id": "KiTS23:case_00271:2:295:2",
+    "case_id": "case_00271",
+    "official_split": "test",
+    "loader_index": 841,
+    "slice_dim": 2,
+    "slice_idx": 295,
+    "label": 2,
+    "image_file": "Images/case_00271.nii.gz",
+    "mask_file": "Masks/case_00271.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00271.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      468
+    ],
+    "pixel_size": [
+      0.6050000190734863,
+      0.6050000190734863
+    ],
+    "voxel_size": [
+      0.6050000190734863,
+      0.6050000190734863,
+      0.5
+    ],
+    "affine": [
+      [
+        0.605,
+        0.0,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.605,
+        0.0,
+        -309.395
+      ],
+      [
+        0.0,
+        0.0,
+        0.5,
+        -233.5
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 3.9079062938690186,
+    "minor_mm": 2.735349178314209
+  },
+  {
+    "sample_id": "KiTS23:case_00064:2:22:2",
+    "case_id": "case_00064",
+    "official_split": "test",
+    "loader_index": 842,
+    "slice_dim": 2,
+    "slice_idx": 22,
+    "label": 2,
+    "image_file": "Images/case_00064.nii.gz",
+    "mask_file": "Masks/case_00064.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00064.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      53
+    ],
+    "pixel_size": [
+      0.703000009059906,
+      0.703000009059906
+    ],
+    "voxel_size": [
+      0.703000009059906,
+      0.703000009059906,
+      5.0
+    ],
+    "affine": [
+      [
+        0.703,
+        0.0,
+        0.0,
+        -359.297
+      ],
+      [
+        0.0,
+        0.703,
+        0.0,
+        -359.297
+      ],
+      [
+        0.0,
+        0.0,
+        5.0,
+        -260.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 11.721360206604004,
+    "minor_mm": 10.813377380371094
+  },
+  {
+    "sample_id": "KiTS23:case_00064:2:23:2",
+    "case_id": "case_00064",
+    "official_split": "test",
+    "loader_index": 843,
+    "slice_dim": 2,
+    "slice_idx": 23,
+    "label": 2,
+    "image_file": "Images/case_00064.nii.gz",
+    "mask_file": "Masks/case_00064.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00064.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      53
+    ],
+    "pixel_size": [
+      0.703000009059906,
+      0.703000009059906
+    ],
+    "voxel_size": [
+      0.703000009059906,
+      0.703000009059906,
+      5.0
+    ],
+    "affine": [
+      [
+        0.703,
+        0.0,
+        0.0,
+        -359.297
+      ],
+      [
+        0.0,
+        0.703,
+        0.0,
+        -359.297
+      ],
+      [
+        0.0,
+        0.0,
+        5.0,
+        -260.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 22.55270004272461,
+    "minor_mm": 21.3531436920166
+  },
+  {
+    "sample_id": "KiTS23:case_00064:2:24:2",
+    "case_id": "case_00064",
+    "official_split": "test",
+    "loader_index": 844,
+    "slice_dim": 2,
+    "slice_idx": 24,
+    "label": 2,
+    "image_file": "Images/case_00064.nii.gz",
+    "mask_file": "Masks/case_00064.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00064.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      53
+    ],
+    "pixel_size": [
+      0.703000009059906,
+      0.703000009059906
+    ],
+    "voxel_size": [
+      0.703000009059906,
+      0.703000009059906,
+      5.0
+    ],
+    "affine": [
+      [
+        0.703,
+        0.0,
+        0.0,
+        -359.297
+      ],
+      [
+        0.0,
+        0.703,
+        0.0,
+        -359.297
+      ],
+      [
+        0.0,
+        0.0,
+        5.0,
+        -260.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 23.8824462890625,
+    "minor_mm": 21.008272171020508
+  },
+  {
+    "sample_id": "KiTS23:case_00064:2:25:2",
+    "case_id": "case_00064",
+    "official_split": "test",
+    "loader_index": 845,
+    "slice_dim": 2,
+    "slice_idx": 25,
+    "label": 2,
+    "image_file": "Images/case_00064.nii.gz",
+    "mask_file": "Masks/case_00064.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00064.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      53
+    ],
+    "pixel_size": [
+      0.703000009059906,
+      0.703000009059906
+    ],
+    "voxel_size": [
+      0.703000009059906,
+      0.703000009059906,
+      5.0
+    ],
+    "affine": [
+      [
+        0.703,
+        0.0,
+        0.0,
+        -359.297
+      ],
+      [
+        0.0,
+        0.703,
+        0.0,
+        -359.297
+      ],
+      [
+        0.0,
+        0.0,
+        5.0,
+        -260.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 21.951610565185547,
+    "minor_mm": 19.556371688842773
+  },
+  {
+    "sample_id": "KiTS23:case_00585:2:110:2",
+    "case_id": "case_00585",
+    "official_split": "test",
+    "loader_index": 846,
+    "slice_dim": 2,
+    "slice_idx": 110,
+    "label": 2,
+    "image_file": "Images/case_00585.nii.gz",
+    "mask_file": "Masks/case_00585.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00585.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      178
+    ],
+    "pixel_size": [
+      0.7580000162124634,
+      0.7580000162124634
+    ],
+    "voxel_size": [
+      0.7580000162124634,
+      0.7580000162124634,
+      2.4860000610351562
+    ],
+    "affine": [
+      [
+        0.758,
+        0.0,
+        0.0,
+        -387.242
+      ],
+      [
+        0.0,
+        0.758,
+        0.0,
+        -387.242
+      ],
+      [
+        0.0,
+        0.0,
+        2.486,
+        -440.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 10.683445930480957,
+    "minor_mm": 7.683745861053467
+  },
+  {
+    "sample_id": "KiTS23:case_00585:2:111:2",
+    "case_id": "case_00585",
+    "official_split": "test",
+    "loader_index": 847,
+    "slice_dim": 2,
+    "slice_idx": 111,
+    "label": 2,
+    "image_file": "Images/case_00585.nii.gz",
+    "mask_file": "Masks/case_00585.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00585.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      178
+    ],
+    "pixel_size": [
+      0.7580000162124634,
+      0.7580000162124634
+    ],
+    "voxel_size": [
+      0.7580000162124634,
+      0.7580000162124634,
+      2.4860000610351562
+    ],
+    "affine": [
+      [
+        0.758,
+        0.0,
+        0.0,
+        -387.242
+      ],
+      [
+        0.0,
+        0.758,
+        0.0,
+        -387.242
+      ],
+      [
+        0.0,
+        0.0,
+        2.486,
+        -440.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 10.774431228637695,
+    "minor_mm": 9.060554504394531
+  },
+  {
+    "sample_id": "KiTS23:case_00585:2:112:2",
+    "case_id": "case_00585",
+    "official_split": "test",
+    "loader_index": 848,
+    "slice_dim": 2,
+    "slice_idx": 112,
+    "label": 2,
+    "image_file": "Images/case_00585.nii.gz",
+    "mask_file": "Masks/case_00585.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00585.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      178
+    ],
+    "pixel_size": [
+      0.7580000162124634,
+      0.7580000162124634
+    ],
+    "voxel_size": [
+      0.7580000162124634,
+      0.7580000162124634,
+      2.4860000610351562
+    ],
+    "affine": [
+      [
+        0.758,
+        0.0,
+        0.0,
+        -387.242
+      ],
+      [
+        0.0,
+        0.758,
+        0.0,
+        -387.242
+      ],
+      [
+        0.0,
+        0.0,
+        2.486,
+        -440.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 19.000051498413086,
+    "minor_mm": 14.940230369567871
+  },
+  {
+    "sample_id": "KiTS23:case_00585:2:113:2",
+    "case_id": "case_00585",
+    "official_split": "test",
+    "loader_index": 849,
+    "slice_dim": 2,
+    "slice_idx": 113,
+    "label": 2,
+    "image_file": "Images/case_00585.nii.gz",
+    "mask_file": "Masks/case_00585.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00585.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      178
+    ],
+    "pixel_size": [
+      0.7580000162124634,
+      0.7580000162124634
+    ],
+    "voxel_size": [
+      0.7580000162124634,
+      0.7580000162124634,
+      2.4860000610351562
+    ],
+    "affine": [
+      [
+        0.758,
+        0.0,
+        0.0,
+        -387.242
+      ],
+      [
+        0.0,
+        0.758,
+        0.0,
+        -387.242
+      ],
+      [
+        0.0,
+        0.0,
+        2.486,
+        -440.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 18.51762580871582,
+    "minor_mm": 14.772679328918457
+  },
+  {
+    "sample_id": "KiTS23:case_00585:2:114:2",
+    "case_id": "case_00585",
+    "official_split": "test",
+    "loader_index": 850,
+    "slice_dim": 2,
+    "slice_idx": 114,
+    "label": 2,
+    "image_file": "Images/case_00585.nii.gz",
+    "mask_file": "Masks/case_00585.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00585.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      178
+    ],
+    "pixel_size": [
+      0.7580000162124634,
+      0.7580000162124634
+    ],
+    "voxel_size": [
+      0.7580000162124634,
+      0.7580000162124634,
+      2.4860000610351562
+    ],
+    "affine": [
+      [
+        0.758,
+        0.0,
+        0.0,
+        -387.242
+      ],
+      [
+        0.0,
+        0.758,
+        0.0,
+        -387.242
+      ],
+      [
+        0.0,
+        0.0,
+        2.486,
+        -440.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 17.428972244262695,
+    "minor_mm": 16.542810440063477
+  },
+  {
+    "sample_id": "KiTS23:case_00585:2:115:2",
+    "case_id": "case_00585",
+    "official_split": "test",
+    "loader_index": 851,
+    "slice_dim": 2,
+    "slice_idx": 115,
+    "label": 2,
+    "image_file": "Images/case_00585.nii.gz",
+    "mask_file": "Masks/case_00585.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00585.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      178
+    ],
+    "pixel_size": [
+      0.7580000162124634,
+      0.7580000162124634
+    ],
+    "voxel_size": [
+      0.7580000162124634,
+      0.7580000162124634,
+      2.4860000610351562
+    ],
+    "affine": [
+      [
+        0.758,
+        0.0,
+        0.0,
+        -387.242
+      ],
+      [
+        0.0,
+        0.758,
+        0.0,
+        -387.242
+      ],
+      [
+        0.0,
+        0.0,
+        2.486,
+        -440.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 17.5418758392334,
+    "minor_mm": 16.274620056152344
+  },
+  {
+    "sample_id": "KiTS23:case_00585:2:116:2",
+    "case_id": "case_00585",
+    "official_split": "test",
+    "loader_index": 852,
+    "slice_dim": 2,
+    "slice_idx": 116,
+    "label": 2,
+    "image_file": "Images/case_00585.nii.gz",
+    "mask_file": "Masks/case_00585.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00585.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      178
+    ],
+    "pixel_size": [
+      0.7580000162124634,
+      0.7580000162124634
+    ],
+    "voxel_size": [
+      0.7580000162124634,
+      0.7580000162124634,
+      2.4860000610351562
+    ],
+    "affine": [
+      [
+        0.758,
+        0.0,
+        0.0,
+        -387.242
+      ],
+      [
+        0.0,
+        0.758,
+        0.0,
+        -387.242
+      ],
+      [
+        0.0,
+        0.0,
+        2.486,
+        -440.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 15.059284210205078,
+    "minor_mm": 11.826261520385742
+  },
+  {
+    "sample_id": "KiTS23:case_00585:2:117:2",
+    "case_id": "case_00585",
+    "official_split": "test",
+    "loader_index": 853,
+    "slice_dim": 2,
+    "slice_idx": 117,
+    "label": 2,
+    "image_file": "Images/case_00585.nii.gz",
+    "mask_file": "Masks/case_00585.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00585.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      178
+    ],
+    "pixel_size": [
+      0.7580000162124634,
+      0.7580000162124634
+    ],
+    "voxel_size": [
+      0.7580000162124634,
+      0.7580000162124634,
+      2.4860000610351562
+    ],
+    "affine": [
+      [
+        0.758,
+        0.0,
+        0.0,
+        -387.242
+      ],
+      [
+        0.0,
+        0.758,
+        0.0,
+        -387.242
+      ],
+      [
+        0.0,
+        0.0,
+        2.486,
+        -440.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 14.464334487915039,
+    "minor_mm": 11.71800422668457
+  },
+  {
+    "sample_id": "KiTS23:case_00499:2:26:2",
+    "case_id": "case_00499",
+    "official_split": "test",
+    "loader_index": 854,
+    "slice_dim": 2,
+    "slice_idx": 26,
+    "label": 2,
+    "image_file": "Images/case_00499.nii.gz",
+    "mask_file": "Masks/case_00499.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00499.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      63
+    ],
+    "pixel_size": [
+      0.921999990940094,
+      0.921999990940094
+    ],
+    "voxel_size": [
+      0.921999990940094,
+      0.921999990940094,
+      5.0
+    ],
+    "affine": [
+      [
+        0.922,
+        0.0,
+        0.0,
+        -471.078
+      ],
+      [
+        0.0,
+        0.922,
+        0.0,
+        -471.078
+      ],
+      [
+        0.0,
+        0.0,
+        5.0,
+        -310.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 19.158939361572266,
+    "minor_mm": 14.934467315673828
+  },
+  {
+    "sample_id": "KiTS23:case_00499:2:27:2",
+    "case_id": "case_00499",
+    "official_split": "test",
+    "loader_index": 855,
+    "slice_dim": 2,
+    "slice_idx": 27,
+    "label": 2,
+    "image_file": "Images/case_00499.nii.gz",
+    "mask_file": "Masks/case_00499.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00499.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      63
+    ],
+    "pixel_size": [
+      0.921999990940094,
+      0.921999990940094
+    ],
+    "voxel_size": [
+      0.921999990940094,
+      0.921999990940094,
+      5.0
+    ],
+    "affine": [
+      [
+        0.922,
+        0.0,
+        0.0,
+        -471.078
+      ],
+      [
+        0.0,
+        0.922,
+        0.0,
+        -471.078
+      ],
+      [
+        0.0,
+        0.0,
+        5.0,
+        -310.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 36.08232116699219,
+    "minor_mm": 26.432741165161133
+  },
+  {
+    "sample_id": "KiTS23:case_00499:2:28:2",
+    "case_id": "case_00499",
+    "official_split": "test",
+    "loader_index": 856,
+    "slice_dim": 2,
+    "slice_idx": 28,
+    "label": 2,
+    "image_file": "Images/case_00499.nii.gz",
+    "mask_file": "Masks/case_00499.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00499.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      63
+    ],
+    "pixel_size": [
+      0.921999990940094,
+      0.921999990940094
+    ],
+    "voxel_size": [
+      0.921999990940094,
+      0.921999990940094,
+      5.0
+    ],
+    "affine": [
+      [
+        0.922,
+        0.0,
+        0.0,
+        -471.078
+      ],
+      [
+        0.0,
+        0.922,
+        0.0,
+        -471.078
+      ],
+      [
+        0.0,
+        0.0,
+        5.0,
+        -310.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 42.361488342285156,
+    "minor_mm": 33.683837890625
+  },
+  {
+    "sample_id": "KiTS23:case_00499:2:29:2",
+    "case_id": "case_00499",
+    "official_split": "test",
+    "loader_index": 857,
+    "slice_dim": 2,
+    "slice_idx": 29,
+    "label": 2,
+    "image_file": "Images/case_00499.nii.gz",
+    "mask_file": "Masks/case_00499.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00499.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      63
+    ],
+    "pixel_size": [
+      0.921999990940094,
+      0.921999990940094
+    ],
+    "voxel_size": [
+      0.921999990940094,
+      0.921999990940094,
+      5.0
+    ],
+    "affine": [
+      [
+        0.922,
+        0.0,
+        0.0,
+        -471.078
+      ],
+      [
+        0.0,
+        0.922,
+        0.0,
+        -471.078
+      ],
+      [
+        0.0,
+        0.0,
+        5.0,
+        -310.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 44.048683166503906,
+    "minor_mm": 37.01251220703125
+  },
+  {
+    "sample_id": "KiTS23:case_00499:2:30:2",
+    "case_id": "case_00499",
+    "official_split": "test",
+    "loader_index": 858,
+    "slice_dim": 2,
+    "slice_idx": 30,
+    "label": 2,
+    "image_file": "Images/case_00499.nii.gz",
+    "mask_file": "Masks/case_00499.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00499.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      63
+    ],
+    "pixel_size": [
+      0.921999990940094,
+      0.921999990940094
+    ],
+    "voxel_size": [
+      0.921999990940094,
+      0.921999990940094,
+      5.0
+    ],
+    "affine": [
+      [
+        0.922,
+        0.0,
+        0.0,
+        -471.078
+      ],
+      [
+        0.0,
+        0.922,
+        0.0,
+        -471.078
+      ],
+      [
+        0.0,
+        0.0,
+        5.0,
+        -310.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 44.27189254760742,
+    "minor_mm": 39.283660888671875
+  },
+  {
+    "sample_id": "KiTS23:case_00499:2:31:2",
+    "case_id": "case_00499",
+    "official_split": "test",
+    "loader_index": 859,
+    "slice_dim": 2,
+    "slice_idx": 31,
+    "label": 2,
+    "image_file": "Images/case_00499.nii.gz",
+    "mask_file": "Masks/case_00499.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00499.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      63
+    ],
+    "pixel_size": [
+      0.921999990940094,
+      0.921999990940094
+    ],
+    "voxel_size": [
+      0.921999990940094,
+      0.921999990940094,
+      5.0
+    ],
+    "affine": [
+      [
+        0.922,
+        0.0,
+        0.0,
+        -471.078
+      ],
+      [
+        0.0,
+        0.922,
+        0.0,
+        -471.078
+      ],
+      [
+        0.0,
+        0.0,
+        5.0,
+        -310.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 45.78889465332031,
+    "minor_mm": 38.23883819580078
+  },
+  {
+    "sample_id": "KiTS23:case_00499:2:38:2",
+    "case_id": "case_00499",
+    "official_split": "test",
+    "loader_index": 860,
+    "slice_dim": 2,
+    "slice_idx": 38,
+    "label": 2,
+    "image_file": "Images/case_00499.nii.gz",
+    "mask_file": "Masks/case_00499.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00499.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      63
+    ],
+    "pixel_size": [
+      0.921999990940094,
+      0.921999990940094
+    ],
+    "voxel_size": [
+      0.921999990940094,
+      0.921999990940094,
+      5.0
+    ],
+    "affine": [
+      [
+        0.922,
+        0.0,
+        0.0,
+        -471.078
+      ],
+      [
+        0.0,
+        0.922,
+        0.0,
+        -471.078
+      ],
+      [
+        0.0,
+        0.0,
+        5.0,
+        -310.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 35.8941764831543,
+    "minor_mm": 24.678529739379883
+  },
+  {
+    "sample_id": "KiTS23:case_00499:2:39:2",
+    "case_id": "case_00499",
+    "official_split": "test",
+    "loader_index": 861,
+    "slice_dim": 2,
+    "slice_idx": 39,
+    "label": 2,
+    "image_file": "Images/case_00499.nii.gz",
+    "mask_file": "Masks/case_00499.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00499.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      63
+    ],
+    "pixel_size": [
+      0.921999990940094,
+      0.921999990940094
+    ],
+    "voxel_size": [
+      0.921999990940094,
+      0.921999990940094,
+      5.0
+    ],
+    "affine": [
+      [
+        0.922,
+        0.0,
+        0.0,
+        -471.078
+      ],
+      [
+        0.0,
+        0.922,
+        0.0,
+        -471.078
+      ],
+      [
+        0.0,
+        0.0,
+        5.0,
+        -310.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 23.82552146911621,
+    "minor_mm": 16.458324432373047
+  },
+  {
+    "sample_id": "KiTS23:case_00035:2:53:2",
+    "case_id": "case_00035",
+    "official_split": "test",
+    "loader_index": 862,
+    "slice_dim": 2,
+    "slice_idx": 53,
+    "label": 2,
+    "image_file": "Images/case_00035.nii.gz",
+    "mask_file": "Masks/case_00035.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00035.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      98
+    ],
+    "pixel_size": [
+      0.9649999737739563,
+      0.9649999737739563
+    ],
+    "voxel_size": [
+      0.9649999737739563,
+      0.9649999737739563,
+      5.0
+    ],
+    "affine": [
+      [
+        0.965,
+        0.0,
+        0.0,
+        -493.035
+      ],
+      [
+        0.0,
+        0.965,
+        0.0,
+        -493.035
+      ],
+      [
+        0.0,
+        0.0,
+        5.0,
+        -485.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 14.417181015014648,
+    "minor_mm": 8.327467918395996
+  },
+  {
+    "sample_id": "KiTS23:case_00035:2:54:2",
+    "case_id": "case_00035",
+    "official_split": "test",
+    "loader_index": 863,
+    "slice_dim": 2,
+    "slice_idx": 54,
+    "label": 2,
+    "image_file": "Images/case_00035.nii.gz",
+    "mask_file": "Masks/case_00035.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00035.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      98
+    ],
+    "pixel_size": [
+      0.9649999737739563,
+      0.9649999737739563
+    ],
+    "voxel_size": [
+      0.9649999737739563,
+      0.9649999737739563,
+      5.0
+    ],
+    "affine": [
+      [
+        0.965,
+        0.0,
+        0.0,
+        -493.035
+      ],
+      [
+        0.0,
+        0.965,
+        0.0,
+        -493.035
+      ],
+      [
+        0.0,
+        0.0,
+        5.0,
+        -485.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 23.958330154418945,
+    "minor_mm": 22.305448532104492
+  },
+  {
+    "sample_id": "KiTS23:case_00035:2:55:2",
+    "case_id": "case_00035",
+    "official_split": "test",
+    "loader_index": 864,
+    "slice_dim": 2,
+    "slice_idx": 55,
+    "label": 2,
+    "image_file": "Images/case_00035.nii.gz",
+    "mask_file": "Masks/case_00035.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00035.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      98
+    ],
+    "pixel_size": [
+      0.9649999737739563,
+      0.9649999737739563
+    ],
+    "voxel_size": [
+      0.9649999737739563,
+      0.9649999737739563,
+      5.0
+    ],
+    "affine": [
+      [
+        0.965,
+        0.0,
+        0.0,
+        -493.035
+      ],
+      [
+        0.0,
+        0.965,
+        0.0,
+        -493.035
+      ],
+      [
+        0.0,
+        0.0,
+        5.0,
+        -485.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 31.65896987915039,
+    "minor_mm": 29.550662994384766
+  },
+  {
+    "sample_id": "KiTS23:case_00035:2:56:2",
+    "case_id": "case_00035",
+    "official_split": "test",
+    "loader_index": 865,
+    "slice_dim": 2,
+    "slice_idx": 56,
+    "label": 2,
+    "image_file": "Images/case_00035.nii.gz",
+    "mask_file": "Masks/case_00035.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00035.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      98
+    ],
+    "pixel_size": [
+      0.9649999737739563,
+      0.9649999737739563
+    ],
+    "voxel_size": [
+      0.9649999737739563,
+      0.9649999737739563,
+      5.0
+    ],
+    "affine": [
+      [
+        0.965,
+        0.0,
+        0.0,
+        -493.035
+      ],
+      [
+        0.0,
+        0.965,
+        0.0,
+        -493.035
+      ],
+      [
+        0.0,
+        0.0,
+        5.0,
+        -485.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 35.335426330566406,
+    "minor_mm": 30.511423110961914
+  },
+  {
+    "sample_id": "KiTS23:case_00035:2:57:2",
+    "case_id": "case_00035",
+    "official_split": "test",
+    "loader_index": 866,
+    "slice_dim": 2,
+    "slice_idx": 57,
+    "label": 2,
+    "image_file": "Images/case_00035.nii.gz",
+    "mask_file": "Masks/case_00035.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00035.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      98
+    ],
+    "pixel_size": [
+      0.9649999737739563,
+      0.9649999737739563
+    ],
+    "voxel_size": [
+      0.9649999737739563,
+      0.9649999737739563,
+      5.0
+    ],
+    "affine": [
+      [
+        0.965,
+        0.0,
+        0.0,
+        -493.035
+      ],
+      [
+        0.0,
+        0.965,
+        0.0,
+        -493.035
+      ],
+      [
+        0.0,
+        0.0,
+        5.0,
+        -485.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 36.153255462646484,
+    "minor_mm": 31.220447540283203
+  },
+  {
+    "sample_id": "KiTS23:case_00035:2:58:2",
+    "case_id": "case_00035",
+    "official_split": "test",
+    "loader_index": 867,
+    "slice_dim": 2,
+    "slice_idx": 58,
+    "label": 2,
+    "image_file": "Images/case_00035.nii.gz",
+    "mask_file": "Masks/case_00035.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00035.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      98
+    ],
+    "pixel_size": [
+      0.9649999737739563,
+      0.9649999737739563
+    ],
+    "voxel_size": [
+      0.9649999737739563,
+      0.9649999737739563,
+      5.0
+    ],
+    "affine": [
+      [
+        0.965,
+        0.0,
+        0.0,
+        -493.035
+      ],
+      [
+        0.0,
+        0.965,
+        0.0,
+        -493.035
+      ],
+      [
+        0.0,
+        0.0,
+        5.0,
+        -485.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 33.93680191040039,
+    "minor_mm": 30.36602020263672
+  },
+  {
+    "sample_id": "KiTS23:case_00035:2:59:2",
+    "case_id": "case_00035",
+    "official_split": "test",
+    "loader_index": 868,
+    "slice_dim": 2,
+    "slice_idx": 59,
+    "label": 2,
+    "image_file": "Images/case_00035.nii.gz",
+    "mask_file": "Masks/case_00035.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00035.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      98
+    ],
+    "pixel_size": [
+      0.9649999737739563,
+      0.9649999737739563
+    ],
+    "voxel_size": [
+      0.9649999737739563,
+      0.9649999737739563,
+      5.0
+    ],
+    "affine": [
+      [
+        0.965,
+        0.0,
+        0.0,
+        -493.035
+      ],
+      [
+        0.0,
+        0.965,
+        0.0,
+        -493.035
+      ],
+      [
+        0.0,
+        0.0,
+        5.0,
+        -485.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 24.79756736755371,
+    "minor_mm": 23.195589065551758
+  },
+  {
+    "sample_id": "KiTS23:case_00035:2:60:2",
+    "case_id": "case_00035",
+    "official_split": "test",
+    "loader_index": 869,
+    "slice_dim": 2,
+    "slice_idx": 60,
+    "label": 2,
+    "image_file": "Images/case_00035.nii.gz",
+    "mask_file": "Masks/case_00035.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00035.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      98
+    ],
+    "pixel_size": [
+      0.9649999737739563,
+      0.9649999737739563
+    ],
+    "voxel_size": [
+      0.9649999737739563,
+      0.9649999737739563,
+      5.0
+    ],
+    "affine": [
+      [
+        0.965,
+        0.0,
+        0.0,
+        -493.035
+      ],
+      [
+        0.0,
+        0.965,
+        0.0,
+        -493.035
+      ],
+      [
+        0.0,
+        0.0,
+        5.0,
+        -485.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 16.83169174194336,
+    "minor_mm": 16.095006942749023
+  },
+  {
+    "sample_id": "KiTS23:case_00035:2:61:2",
+    "case_id": "case_00035",
+    "official_split": "test",
+    "loader_index": 870,
+    "slice_dim": 2,
+    "slice_idx": 61,
+    "label": 2,
+    "image_file": "Images/case_00035.nii.gz",
+    "mask_file": "Masks/case_00035.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00035.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      98
+    ],
+    "pixel_size": [
+      0.9649999737739563,
+      0.9649999737739563
+    ],
+    "voxel_size": [
+      0.9649999737739563,
+      0.9649999737739563,
+      5.0
+    ],
+    "affine": [
+      [
+        0.965,
+        0.0,
+        0.0,
+        -493.035
+      ],
+      [
+        0.0,
+        0.965,
+        0.0,
+        -493.035
+      ],
+      [
+        0.0,
+        0.0,
+        5.0,
+        -485.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 8.49141788482666,
+    "minor_mm": 8.014569282531738
+  },
+  {
+    "sample_id": "KiTS23:case_00019:2:83:2",
+    "case_id": "case_00019",
+    "official_split": "test",
+    "loader_index": 871,
+    "slice_dim": 2,
+    "slice_idx": 83,
+    "label": 2,
+    "image_file": "Images/case_00019.nii.gz",
+    "mask_file": "Masks/case_00019.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00019.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      129
+    ],
+    "pixel_size": [
+      0.9380000233650208,
+      0.9380000233650208
+    ],
+    "voxel_size": [
+      0.9380000233650208,
+      0.9380000233650208,
+      3.75
+    ],
+    "affine": [
+      [
+        0.938,
+        0.0,
+        0.0,
+        -479.062
+      ],
+      [
+        0.0,
+        0.938,
+        0.0,
+        -479.062
+      ],
+      [
+        0.0,
+        0.0,
+        3.75,
+        -480.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 5.077162265777588,
+    "minor_mm": 3.300178289413452
+  },
+  {
+    "sample_id": "KiTS23:case_00019:2:84:2",
+    "case_id": "case_00019",
+    "official_split": "test",
+    "loader_index": 872,
+    "slice_dim": 2,
+    "slice_idx": 84,
+    "label": 2,
+    "image_file": "Images/case_00019.nii.gz",
+    "mask_file": "Masks/case_00019.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00019.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      129
+    ],
+    "pixel_size": [
+      0.9380000233650208,
+      0.9380000233650208
+    ],
+    "voxel_size": [
+      0.9380000233650208,
+      0.9380000233650208,
+      3.75
+    ],
+    "affine": [
+      [
+        0.938,
+        0.0,
+        0.0,
+        -479.062
+      ],
+      [
+        0.0,
+        0.938,
+        0.0,
+        -479.062
+      ],
+      [
+        0.0,
+        0.0,
+        3.75,
+        -480.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 5.000498294830322,
+    "minor_mm": 4.657994747161865
+  },
+  {
+    "sample_id": "KiTS23:case_00019:2:85:2",
+    "case_id": "case_00019",
+    "official_split": "test",
+    "loader_index": 873,
+    "slice_dim": 2,
+    "slice_idx": 85,
+    "label": 2,
+    "image_file": "Images/case_00019.nii.gz",
+    "mask_file": "Masks/case_00019.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00019.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      129
+    ],
+    "pixel_size": [
+      0.9380000233650208,
+      0.9380000233650208
+    ],
+    "voxel_size": [
+      0.9380000233650208,
+      0.9380000233650208,
+      3.75
+    ],
+    "affine": [
+      [
+        0.938,
+        0.0,
+        0.0,
+        -479.062
+      ],
+      [
+        0.0,
+        0.938,
+        0.0,
+        -479.062
+      ],
+      [
+        0.0,
+        0.0,
+        3.75,
+        -480.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 13.977824211120605,
+    "minor_mm": 12.174412727355957
+  },
+  {
+    "sample_id": "KiTS23:case_00019:2:86:2",
+    "case_id": "case_00019",
+    "official_split": "test",
+    "loader_index": 874,
+    "slice_dim": 2,
+    "slice_idx": 86,
+    "label": 2,
+    "image_file": "Images/case_00019.nii.gz",
+    "mask_file": "Masks/case_00019.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00019.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      129
+    ],
+    "pixel_size": [
+      0.9380000233650208,
+      0.9380000233650208
+    ],
+    "voxel_size": [
+      0.9380000233650208,
+      0.9380000233650208,
+      3.75
+    ],
+    "affine": [
+      [
+        0.938,
+        0.0,
+        0.0,
+        -479.062
+      ],
+      [
+        0.0,
+        0.938,
+        0.0,
+        -479.062
+      ],
+      [
+        0.0,
+        0.0,
+        3.75,
+        -480.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 15.131767272949219,
+    "minor_mm": 14.135661125183105
+  },
+  {
+    "sample_id": "KiTS23:case_00019:2:87:2",
+    "case_id": "case_00019",
+    "official_split": "test",
+    "loader_index": 875,
+    "slice_dim": 2,
+    "slice_idx": 87,
+    "label": 2,
+    "image_file": "Images/case_00019.nii.gz",
+    "mask_file": "Masks/case_00019.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00019.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      129
+    ],
+    "pixel_size": [
+      0.9380000233650208,
+      0.9380000233650208
+    ],
+    "voxel_size": [
+      0.9380000233650208,
+      0.9380000233650208,
+      3.75
+    ],
+    "affine": [
+      [
+        0.938,
+        0.0,
+        0.0,
+        -479.062
+      ],
+      [
+        0.0,
+        0.938,
+        0.0,
+        -479.062
+      ],
+      [
+        0.0,
+        0.0,
+        3.75,
+        -480.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 11.019954681396484,
+    "minor_mm": 10.763922691345215
+  },
+  {
+    "sample_id": "KiTS23:case_00131:2:108:2",
+    "case_id": "case_00131",
+    "official_split": "test",
+    "loader_index": 876,
+    "slice_dim": 2,
+    "slice_idx": 108,
+    "label": 2,
+    "image_file": "Images/case_00131.nii.gz",
+    "mask_file": "Masks/case_00131.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00131.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      159
+    ],
+    "pixel_size": [
+      0.6679999828338623,
+      0.6679999828338623
+    ],
+    "voxel_size": [
+      0.6679999828338623,
+      0.6679999828338623,
+      3.0
+    ],
+    "affine": [
+      [
+        0.668,
+        0.0,
+        0.0,
+        -341.348
+      ],
+      [
+        0.0,
+        0.668,
+        0.0,
+        -341.348
+      ],
+      [
+        0.0,
+        0.0,
+        3.0,
+        -474.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 25.372488021850586,
+    "minor_mm": 16.606216430664062
+  },
+  {
+    "sample_id": "KiTS23:case_00131:2:109:2",
+    "case_id": "case_00131",
+    "official_split": "test",
+    "loader_index": 877,
+    "slice_dim": 2,
+    "slice_idx": 109,
+    "label": 2,
+    "image_file": "Images/case_00131.nii.gz",
+    "mask_file": "Masks/case_00131.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00131.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      159
+    ],
+    "pixel_size": [
+      0.6679999828338623,
+      0.6679999828338623
+    ],
+    "voxel_size": [
+      0.6679999828338623,
+      0.6679999828338623,
+      3.0
+    ],
+    "affine": [
+      [
+        0.668,
+        0.0,
+        0.0,
+        -341.348
+      ],
+      [
+        0.0,
+        0.668,
+        0.0,
+        -341.348
+      ],
+      [
+        0.0,
+        0.0,
+        3.0,
+        -474.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 34.336605072021484,
+    "minor_mm": 26.664764404296875
+  },
+  {
+    "sample_id": "KiTS23:case_00131:2:110:2",
+    "case_id": "case_00131",
+    "official_split": "test",
+    "loader_index": 878,
+    "slice_dim": 2,
+    "slice_idx": 110,
+    "label": 2,
+    "image_file": "Images/case_00131.nii.gz",
+    "mask_file": "Masks/case_00131.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00131.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      159
+    ],
+    "pixel_size": [
+      0.6679999828338623,
+      0.6679999828338623
+    ],
+    "voxel_size": [
+      0.6679999828338623,
+      0.6679999828338623,
+      3.0
+    ],
+    "affine": [
+      [
+        0.668,
+        0.0,
+        0.0,
+        -341.348
+      ],
+      [
+        0.0,
+        0.668,
+        0.0,
+        -341.348
+      ],
+      [
+        0.0,
+        0.0,
+        3.0,
+        -474.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 40.33897399902344,
+    "minor_mm": 35.56089782714844
+  },
+  {
+    "sample_id": "KiTS23:case_00131:2:111:2",
+    "case_id": "case_00131",
+    "official_split": "test",
+    "loader_index": 879,
+    "slice_dim": 2,
+    "slice_idx": 111,
+    "label": 2,
+    "image_file": "Images/case_00131.nii.gz",
+    "mask_file": "Masks/case_00131.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00131.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      159
+    ],
+    "pixel_size": [
+      0.6679999828338623,
+      0.6679999828338623
+    ],
+    "voxel_size": [
+      0.6679999828338623,
+      0.6679999828338623,
+      3.0
+    ],
+    "affine": [
+      [
+        0.668,
+        0.0,
+        0.0,
+        -341.348
+      ],
+      [
+        0.0,
+        0.668,
+        0.0,
+        -341.348
+      ],
+      [
+        0.0,
+        0.0,
+        3.0,
+        -474.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 46.19122314453125,
+    "minor_mm": 41.05810546875
+  },
+  {
+    "sample_id": "KiTS23:case_00131:2:112:2",
+    "case_id": "case_00131",
+    "official_split": "test",
+    "loader_index": 880,
+    "slice_dim": 2,
+    "slice_idx": 112,
+    "label": 2,
+    "image_file": "Images/case_00131.nii.gz",
+    "mask_file": "Masks/case_00131.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00131.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      159
+    ],
+    "pixel_size": [
+      0.6679999828338623,
+      0.6679999828338623
+    ],
+    "voxel_size": [
+      0.6679999828338623,
+      0.6679999828338623,
+      3.0
+    ],
+    "affine": [
+      [
+        0.668,
+        0.0,
+        0.0,
+        -341.348
+      ],
+      [
+        0.0,
+        0.668,
+        0.0,
+        -341.348
+      ],
+      [
+        0.0,
+        0.0,
+        3.0,
+        -474.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 48.42621612548828,
+    "minor_mm": 44.7358512878418
+  },
+  {
+    "sample_id": "KiTS23:case_00131:2:113:2",
+    "case_id": "case_00131",
+    "official_split": "test",
+    "loader_index": 881,
+    "slice_dim": 2,
+    "slice_idx": 113,
+    "label": 2,
+    "image_file": "Images/case_00131.nii.gz",
+    "mask_file": "Masks/case_00131.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00131.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      159
+    ],
+    "pixel_size": [
+      0.6679999828338623,
+      0.6679999828338623
+    ],
+    "voxel_size": [
+      0.6679999828338623,
+      0.6679999828338623,
+      3.0
+    ],
+    "affine": [
+      [
+        0.668,
+        0.0,
+        0.0,
+        -341.348
+      ],
+      [
+        0.0,
+        0.668,
+        0.0,
+        -341.348
+      ],
+      [
+        0.0,
+        0.0,
+        3.0,
+        -474.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 48.669525146484375,
+    "minor_mm": 46.47679138183594
+  },
+  {
+    "sample_id": "KiTS23:case_00131:2:114:2",
+    "case_id": "case_00131",
+    "official_split": "test",
+    "loader_index": 882,
+    "slice_dim": 2,
+    "slice_idx": 114,
+    "label": 2,
+    "image_file": "Images/case_00131.nii.gz",
+    "mask_file": "Masks/case_00131.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00131.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      159
+    ],
+    "pixel_size": [
+      0.6679999828338623,
+      0.6679999828338623
+    ],
+    "voxel_size": [
+      0.6679999828338623,
+      0.6679999828338623,
+      3.0
+    ],
+    "affine": [
+      [
+        0.668,
+        0.0,
+        0.0,
+        -341.348
+      ],
+      [
+        0.0,
+        0.668,
+        0.0,
+        -341.348
+      ],
+      [
+        0.0,
+        0.0,
+        3.0,
+        -474.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 50.48548126220703,
+    "minor_mm": 45.821956634521484
+  },
+  {
+    "sample_id": "KiTS23:case_00131:2:115:2",
+    "case_id": "case_00131",
+    "official_split": "test",
+    "loader_index": 883,
+    "slice_dim": 2,
+    "slice_idx": 115,
+    "label": 2,
+    "image_file": "Images/case_00131.nii.gz",
+    "mask_file": "Masks/case_00131.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00131.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      159
+    ],
+    "pixel_size": [
+      0.6679999828338623,
+      0.6679999828338623
+    ],
+    "voxel_size": [
+      0.6679999828338623,
+      0.6679999828338623,
+      3.0
+    ],
+    "affine": [
+      [
+        0.668,
+        0.0,
+        0.0,
+        -341.348
+      ],
+      [
+        0.0,
+        0.668,
+        0.0,
+        -341.348
+      ],
+      [
+        0.0,
+        0.0,
+        3.0,
+        -474.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 49.200557708740234,
+    "minor_mm": 46.161983489990234
+  },
+  {
+    "sample_id": "KiTS23:case_00131:2:116:2",
+    "case_id": "case_00131",
+    "official_split": "test",
+    "loader_index": 884,
+    "slice_dim": 2,
+    "slice_idx": 116,
+    "label": 2,
+    "image_file": "Images/case_00131.nii.gz",
+    "mask_file": "Masks/case_00131.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00131.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      159
+    ],
+    "pixel_size": [
+      0.6679999828338623,
+      0.6679999828338623
+    ],
+    "voxel_size": [
+      0.6679999828338623,
+      0.6679999828338623,
+      3.0
+    ],
+    "affine": [
+      [
+        0.668,
+        0.0,
+        0.0,
+        -341.348
+      ],
+      [
+        0.0,
+        0.668,
+        0.0,
+        -341.348
+      ],
+      [
+        0.0,
+        0.0,
+        3.0,
+        -474.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 48.00456619262695,
+    "minor_mm": 45.00693130493164
+  },
+  {
+    "sample_id": "KiTS23:case_00131:2:117:2",
+    "case_id": "case_00131",
+    "official_split": "test",
+    "loader_index": 885,
+    "slice_dim": 2,
+    "slice_idx": 117,
+    "label": 2,
+    "image_file": "Images/case_00131.nii.gz",
+    "mask_file": "Masks/case_00131.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00131.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      159
+    ],
+    "pixel_size": [
+      0.6679999828338623,
+      0.6679999828338623
+    ],
+    "voxel_size": [
+      0.6679999828338623,
+      0.6679999828338623,
+      3.0
+    ],
+    "affine": [
+      [
+        0.668,
+        0.0,
+        0.0,
+        -341.348
+      ],
+      [
+        0.0,
+        0.668,
+        0.0,
+        -341.348
+      ],
+      [
+        0.0,
+        0.0,
+        3.0,
+        -474.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 44.910526275634766,
+    "minor_mm": 43.42589569091797
+  },
+  {
+    "sample_id": "KiTS23:case_00131:2:118:2",
+    "case_id": "case_00131",
+    "official_split": "test",
+    "loader_index": 886,
+    "slice_dim": 2,
+    "slice_idx": 118,
+    "label": 2,
+    "image_file": "Images/case_00131.nii.gz",
+    "mask_file": "Masks/case_00131.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00131.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      159
+    ],
+    "pixel_size": [
+      0.6679999828338623,
+      0.6679999828338623
+    ],
+    "voxel_size": [
+      0.6679999828338623,
+      0.6679999828338623,
+      3.0
+    ],
+    "affine": [
+      [
+        0.668,
+        0.0,
+        0.0,
+        -341.348
+      ],
+      [
+        0.0,
+        0.668,
+        0.0,
+        -341.348
+      ],
+      [
+        0.0,
+        0.0,
+        3.0,
+        -474.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 41.48382568359375,
+    "minor_mm": 40.017478942871094
+  },
+  {
+    "sample_id": "KiTS23:case_00131:2:119:2",
+    "case_id": "case_00131",
+    "official_split": "test",
+    "loader_index": 887,
+    "slice_dim": 2,
+    "slice_idx": 119,
+    "label": 2,
+    "image_file": "Images/case_00131.nii.gz",
+    "mask_file": "Masks/case_00131.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00131.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      159
+    ],
+    "pixel_size": [
+      0.6679999828338623,
+      0.6679999828338623
+    ],
+    "voxel_size": [
+      0.6679999828338623,
+      0.6679999828338623,
+      3.0
+    ],
+    "affine": [
+      [
+        0.668,
+        0.0,
+        0.0,
+        -341.348
+      ],
+      [
+        0.0,
+        0.668,
+        0.0,
+        -341.348
+      ],
+      [
+        0.0,
+        0.0,
+        3.0,
+        -474.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 42.48788070678711,
+    "minor_mm": 35.96561050415039
+  },
+  {
+    "sample_id": "KiTS23:case_00131:2:120:2",
+    "case_id": "case_00131",
+    "official_split": "test",
+    "loader_index": 888,
+    "slice_dim": 2,
+    "slice_idx": 120,
+    "label": 2,
+    "image_file": "Images/case_00131.nii.gz",
+    "mask_file": "Masks/case_00131.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00131.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      159
+    ],
+    "pixel_size": [
+      0.6679999828338623,
+      0.6679999828338623
+    ],
+    "voxel_size": [
+      0.6679999828338623,
+      0.6679999828338623,
+      3.0
+    ],
+    "affine": [
+      [
+        0.668,
+        0.0,
+        0.0,
+        -341.348
+      ],
+      [
+        0.0,
+        0.668,
+        0.0,
+        -341.348
+      ],
+      [
+        0.0,
+        0.0,
+        3.0,
+        -474.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 42.3741340637207,
+    "minor_mm": 31.323566436767578
+  },
+  {
+    "sample_id": "KiTS23:case_00131:2:121:2",
+    "case_id": "case_00131",
+    "official_split": "test",
+    "loader_index": 889,
+    "slice_dim": 2,
+    "slice_idx": 121,
+    "label": 2,
+    "image_file": "Images/case_00131.nii.gz",
+    "mask_file": "Masks/case_00131.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00131.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      159
+    ],
+    "pixel_size": [
+      0.6679999828338623,
+      0.6679999828338623
+    ],
+    "voxel_size": [
+      0.6679999828338623,
+      0.6679999828338623,
+      3.0
+    ],
+    "affine": [
+      [
+        0.668,
+        0.0,
+        0.0,
+        -341.348
+      ],
+      [
+        0.0,
+        0.668,
+        0.0,
+        -341.348
+      ],
+      [
+        0.0,
+        0.0,
+        3.0,
+        -474.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 31.041845321655273,
+    "minor_mm": 24.91923713684082
+  },
+  {
+    "sample_id": "KiTS23:case_00048:2:52:2",
+    "case_id": "case_00048",
+    "official_split": "test",
+    "loader_index": 890,
+    "slice_dim": 2,
+    "slice_idx": 52,
+    "label": 2,
+    "image_file": "Images/case_00048.nii.gz",
+    "mask_file": "Masks/case_00048.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00048.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      85
+    ],
+    "pixel_size": [
+      1.0410000085830688,
+      1.0410000085830688
+    ],
+    "voxel_size": [
+      1.0410000085830688,
+      1.0410000085830688,
+      5.0
+    ],
+    "affine": [
+      [
+        1.041,
+        0.0,
+        0.0,
+        -531.951
+      ],
+      [
+        0.0,
+        1.041,
+        0.0,
+        -531.951
+      ],
+      [
+        0.0,
+        0.0,
+        5.0,
+        -420.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 12.853074073791504,
+    "minor_mm": 12.553186416625977
+  },
+  {
+    "sample_id": "KiTS23:case_00048:2:53:2",
+    "case_id": "case_00048",
+    "official_split": "test",
+    "loader_index": 891,
+    "slice_dim": 2,
+    "slice_idx": 53,
+    "label": 2,
+    "image_file": "Images/case_00048.nii.gz",
+    "mask_file": "Masks/case_00048.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00048.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      85
+    ],
+    "pixel_size": [
+      1.0410000085830688,
+      1.0410000085830688
+    ],
+    "voxel_size": [
+      1.0410000085830688,
+      1.0410000085830688,
+      5.0
+    ],
+    "affine": [
+      [
+        1.041,
+        0.0,
+        0.0,
+        -531.951
+      ],
+      [
+        0.0,
+        1.041,
+        0.0,
+        -531.951
+      ],
+      [
+        0.0,
+        0.0,
+        5.0,
+        -420.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 30.84531021118164,
+    "minor_mm": 25.214305877685547
+  },
+  {
+    "sample_id": "KiTS23:case_00048:2:54:2",
+    "case_id": "case_00048",
+    "official_split": "test",
+    "loader_index": 892,
+    "slice_dim": 2,
+    "slice_idx": 54,
+    "label": 2,
+    "image_file": "Images/case_00048.nii.gz",
+    "mask_file": "Masks/case_00048.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00048.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      85
+    ],
+    "pixel_size": [
+      1.0410000085830688,
+      1.0410000085830688
+    ],
+    "voxel_size": [
+      1.0410000085830688,
+      1.0410000085830688,
+      5.0
+    ],
+    "affine": [
+      [
+        1.041,
+        0.0,
+        0.0,
+        -531.951
+      ],
+      [
+        0.0,
+        1.041,
+        0.0,
+        -531.951
+      ],
+      [
+        0.0,
+        0.0,
+        5.0,
+        -420.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 38.010475158691406,
+    "minor_mm": 32.4567756652832
+  },
+  {
+    "sample_id": "KiTS23:case_00048:2:55:2",
+    "case_id": "case_00048",
+    "official_split": "test",
+    "loader_index": 893,
+    "slice_dim": 2,
+    "slice_idx": 55,
+    "label": 2,
+    "image_file": "Images/case_00048.nii.gz",
+    "mask_file": "Masks/case_00048.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00048.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      85
+    ],
+    "pixel_size": [
+      1.0410000085830688,
+      1.0410000085830688
+    ],
+    "voxel_size": [
+      1.0410000085830688,
+      1.0410000085830688,
+      5.0
+    ],
+    "affine": [
+      [
+        1.041,
+        0.0,
+        0.0,
+        -531.951
+      ],
+      [
+        0.0,
+        1.041,
+        0.0,
+        -531.951
+      ],
+      [
+        0.0,
+        0.0,
+        5.0,
+        -420.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 42.10326385498047,
+    "minor_mm": 37.02512741088867
+  },
+  {
+    "sample_id": "KiTS23:case_00048:2:56:2",
+    "case_id": "case_00048",
+    "official_split": "test",
+    "loader_index": 894,
+    "slice_dim": 2,
+    "slice_idx": 56,
+    "label": 2,
+    "image_file": "Images/case_00048.nii.gz",
+    "mask_file": "Masks/case_00048.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00048.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      85
+    ],
+    "pixel_size": [
+      1.0410000085830688,
+      1.0410000085830688
+    ],
+    "voxel_size": [
+      1.0410000085830688,
+      1.0410000085830688,
+      5.0
+    ],
+    "affine": [
+      [
+        1.041,
+        0.0,
+        0.0,
+        -531.951
+      ],
+      [
+        0.0,
+        1.041,
+        0.0,
+        -531.951
+      ],
+      [
+        0.0,
+        0.0,
+        5.0,
+        -420.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 42.74123764038086,
+    "minor_mm": 38.6699104309082
+  },
+  {
+    "sample_id": "KiTS23:case_00048:2:57:2",
+    "case_id": "case_00048",
+    "official_split": "test",
+    "loader_index": 895,
+    "slice_dim": 2,
+    "slice_idx": 57,
+    "label": 2,
+    "image_file": "Images/case_00048.nii.gz",
+    "mask_file": "Masks/case_00048.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00048.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      85
+    ],
+    "pixel_size": [
+      1.0410000085830688,
+      1.0410000085830688
+    ],
+    "voxel_size": [
+      1.0410000085830688,
+      1.0410000085830688,
+      5.0
+    ],
+    "affine": [
+      [
+        1.041,
+        0.0,
+        0.0,
+        -531.951
+      ],
+      [
+        0.0,
+        1.041,
+        0.0,
+        -531.951
+      ],
+      [
+        0.0,
+        0.0,
+        5.0,
+        -420.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 41.99269104003906,
+    "minor_mm": 37.9804801940918
+  },
+  {
+    "sample_id": "KiTS23:case_00048:2:58:2",
+    "case_id": "case_00048",
+    "official_split": "test",
+    "loader_index": 896,
+    "slice_dim": 2,
+    "slice_idx": 58,
+    "label": 2,
+    "image_file": "Images/case_00048.nii.gz",
+    "mask_file": "Masks/case_00048.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00048.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      85
+    ],
+    "pixel_size": [
+      1.0410000085830688,
+      1.0410000085830688
+    ],
+    "voxel_size": [
+      1.0410000085830688,
+      1.0410000085830688,
+      5.0
+    ],
+    "affine": [
+      [
+        1.041,
+        0.0,
+        0.0,
+        -531.951
+      ],
+      [
+        0.0,
+        1.041,
+        0.0,
+        -531.951
+      ],
+      [
+        0.0,
+        0.0,
+        5.0,
+        -420.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 40.56626892089844,
+    "minor_mm": 36.343692779541016
+  },
+  {
+    "sample_id": "KiTS23:case_00048:2:59:2",
+    "case_id": "case_00048",
+    "official_split": "test",
+    "loader_index": 897,
+    "slice_dim": 2,
+    "slice_idx": 59,
+    "label": 2,
+    "image_file": "Images/case_00048.nii.gz",
+    "mask_file": "Masks/case_00048.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00048.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      85
+    ],
+    "pixel_size": [
+      1.0410000085830688,
+      1.0410000085830688
+    ],
+    "voxel_size": [
+      1.0410000085830688,
+      1.0410000085830688,
+      5.0
+    ],
+    "affine": [
+      [
+        1.041,
+        0.0,
+        0.0,
+        -531.951
+      ],
+      [
+        0.0,
+        1.041,
+        0.0,
+        -531.951
+      ],
+      [
+        0.0,
+        0.0,
+        5.0,
+        -420.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 32.610679626464844,
+    "minor_mm": 24.500186920166016
+  },
+  {
+    "sample_id": "KiTS23:case_00048:2:60:2",
+    "case_id": "case_00048",
+    "official_split": "test",
+    "loader_index": 898,
+    "slice_dim": 2,
+    "slice_idx": 60,
+    "label": 2,
+    "image_file": "Images/case_00048.nii.gz",
+    "mask_file": "Masks/case_00048.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00048.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      85
+    ],
+    "pixel_size": [
+      1.0410000085830688,
+      1.0410000085830688
+    ],
+    "voxel_size": [
+      1.0410000085830688,
+      1.0410000085830688,
+      5.0
+    ],
+    "affine": [
+      [
+        1.041,
+        0.0,
+        0.0,
+        -531.951
+      ],
+      [
+        0.0,
+        1.041,
+        0.0,
+        -531.951
+      ],
+      [
+        0.0,
+        0.0,
+        5.0,
+        -420.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 24.93840789794922,
+    "minor_mm": 15.077095031738281
+  },
+  {
+    "sample_id": "KiTS23:case_00541:2:336:2",
+    "case_id": "case_00541",
+    "official_split": "test",
+    "loader_index": 899,
+    "slice_dim": 2,
+    "slice_idx": 336,
+    "label": 2,
+    "image_file": "Images/case_00541.nii.gz",
+    "mask_file": "Masks/case_00541.nii.gz",
+    "landmark_file": "Landmarks-Label2-v1.4.0/case_00541.json.gz",
+    "image_size_3d": [
+      512,
+      512,
+      493
+    ],
+    "pixel_size": [
+      0.9240000247955322,
+      0.9240000247955322
+    ],
+    "voxel_size": [
+      0.9240000247955322,
+      0.9240000247955322,
+      1.0
+    ],
+    "affine": [
+      [
+        0.924,
+        0.0,
+        0.0,
+        -472.076
+      ],
+      [
+        0.0,
+        0.924,
+        0.0,
+        -472.076
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        -492.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orientation": [
+      "R",
+      "A",
+      "S"
+    ],
+    "major_mm": 11.757153511047363,
+    "minor_mm": 7.262289524078369
+  }
+]

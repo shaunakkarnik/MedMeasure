@@ -1,0 +1,148 @@
+{
+  "results": {
+    "MedMeasure_KiTS23_TL_Axial": {
+      "alias": "MedMeasure_KiTS23_TL_Axial",
+      "avgMAE,none": 15.36256263256073,
+      "avgMAE_stderr,none": "N/A",
+      "avgMRE,none": 0.38648354595172196,
+      "avgMRE_stderr,none": "N/A",
+      "SuccessRate,none": 1.0,
+      "SuccessRate_stderr,none": "N/A",
+      "nMAE,none": 0.0319966139849914,
+      "nMAE_stderr,none": "N/A"
+    }
+  },
+  "group_subtasks": {
+    "MedMeasure_KiTS23_TL_Axial": []
+  },
+  "configs": {
+    "MedMeasure_KiTS23_TL_Axial": {
+      "task": "MedMeasure_KiTS23_TL_Axial",
+      "tag": "MedVision-TumorLesionSize,KiTS23",
+      "dataset_path": "YongchengYAO/MedVision",
+      "dataset_name": "KiTS23_TumorLesionSize_Task01_Axial_Test",
+      "dataset_kwargs": {
+        "trust_remote_code": true,
+        "revision": "f4040ed7d2d2b45e09c1a996ad2969f2018051d3"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "full_docs": false,
+      "process_results_use_image": false,
+      "doc_to_visual": "<function doc_to_visual at 0x7dad6642f100>",
+      "doc_to_text": "<function create_doc_to_text_TumorLesionSize_CoT.<locals>.doc_to_text_TumorLesionSize_CoT at 0x7dad03ca7560>",
+      "doc_to_target": "<function doc_to_target_TumorLesionSize at 0x7dad154eb240>",
+      "process_results": "<function process_results_TumorLesionSize at 0x7dad154eb4c0>",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "avgMAE",
+          "aggregation": "<function aggregate_results_avgMAE at 0x7dad154eb7e0>",
+          "higher_is_better": false
+        },
+        {
+          "metric": "avgMRE",
+          "aggregation": "<function aggregate_results_avgMRE at 0x7dad154eb880>",
+          "higher_is_better": false
+        },
+        {
+          "metric": "SuccessRate",
+          "aggregation": "<function aggregate_results_SuccessRate at 0x7dad154eb920>",
+          "higher_is_better": true
+        },
+        {
+          "metric": "nMAE",
+          "aggregation": "<function aggregate_results_NMAE at 0x7dad154eb9c0>",
+          "higher_is_better": false
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "do_sample": false
+      },
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": [
+        {
+          "version": "1.1.0-dev"
+        }
+      ],
+      "lmms_eval_specific_kwargs": {
+        "healthgpt": {
+          "model": "healthgpt",
+          "base_model_hf": "microsoft/phi-4",
+          "vision_model_hf": "openai/clip-vit-large-patch14-336",
+          "model_dtype": "FP16",
+          "hlora_r": 32,
+          "hlora_alpha": 64,
+          "hlora_dropout": 0,
+          "hlora_nums": 4,
+          "instruct_template": "phi4_instruct"
+        },
+        "default": {
+          "pre_prompt": "",
+          "post_prompt": ""
+        },
+        "dataset": null,
+        "pre_prompt": "",
+        "post_prompt": "",
+        "model_name": "vllm_qwen25vl",
+        "model_hf": "/content/MedVision-V0-7B"
+      }
+    }
+  },
+  "versions": {
+    "MedMeasure_KiTS23_TL_Axial": "Yaml"
+  },
+  "n-shot": {
+    "MedMeasure_KiTS23_TL_Axial": 0
+  },
+  "higher_is_better": {
+    "MedMeasure_KiTS23_TL_Axial": {
+      "avgMAE": false,
+      "avgMRE": false,
+      "SuccessRate": true,
+      "nMAE": false
+    }
+  },
+  "n-samples": {
+    "MedMeasure_KiTS23_TL_Axial": {
+      "original": 3179,
+      "effective": 10
+    }
+  },
+  "config": {
+    "model": "vllm_qwen25vl",
+    "model_args": "model_hf=/content/MedVision-V0-7B,tensor_parallel_size=1,max_num_seqs=1,gpu_memory_utilization=0.9,max_new_tokens=4096,dtype=auto,reshape_image_hw=512x512,hf_overrides={\"vision_start_token_id\":151652},system_prompt=[\"A conversation between a User and an Assistant. The User asks a question, and the Assistant solves it. The Assistant first thinks through the reasoning process internally, then provides the User with the answer. The reasoning process and the final answer must be enclosed within <think> </think> and <answer> </answer> tags, respectively. For example: <think> reasoning process here </think> <answer> answer here </answer>. Within the <think> </think> tags, report the reasoning process for each step inside <step-k-reasoning> </step-k-reasoning> tags, followed by the intermediate results in <step-k-answer> </step-k-answer> tags. For example: <think> <step-1-reasoning> reasoning for step 1 </step-1-reasoning> <step-1-answer> intermediate result from step 1 </step-1-answer> </think>.\"]",
+    "batch_size": "1",
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": 10.0,
+    "bootstrap_iters": 100000,
+    "gen_kwargs": "",
+    "random_seed": 0,
+    "numpy_seed": 1234,
+    "torch_seed": 1234,
+    "fewshot_seed": 1234
+  },
+  "git_hash": "82337dc",
+  "date": "20261012_063307",
+  "task_hashes": {
+    "MedMeasure_KiTS23_TL_Axial": "03e2cf3679d4601f6bf2cdae85337937807937fa301cb2f8e2eaa03794647ec2"
+  },
+  "model_source": "vllm_qwen25vl",
+  "model_name": "",
+  "model_name_sanitized": "",
+  "system_instruction": null,
+  "system_instruction_sha": null,
+  "fewshot_as_multiturn": false,
+  "chat_template": null,
+  "chat_template_sha": null,
+  "start_time": 29914.145861534,
+  "end_time": 32363.52774528,
+  "total_evaluation_time_seconds": "2449.3818837459985"
+}
