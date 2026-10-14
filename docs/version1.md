@@ -9,6 +9,9 @@ generate a textual measurement answer.
 
 - Load the existing pinned MedVision-V0 checkpoint and processor from
   `configs/kits23-pilot.json`, using Transformers 4.51.3.
+- The released config also contains a redundant nested `text_config` from
+  Transformers 4.56.1. The loader checks matching architecture fields and removes
+  that nested dict in memory for 4.51.3; cached config files and weights stay intact.
 - Capture vision block outputs at zero-based layers 7, 15, 23, and 31. Reverse
   attention-window ordering and merge-block packing to recover the patch grid.
 - Run the image/question prompt through the language model. Use its final
@@ -33,6 +36,18 @@ baseline's official prompt/rendering. Disclose this along with additional mask
 supervision; use the same specialist inputs for future architecture ablations.
 
 ## Setup and first run
+
+For a fresh Colab runtime, open
+[`notebooks/medmeasure_v1_training.ipynb`](../notebooks/medmeasure_v1_training.ipynb)
+from GitHub after committing/pushing it with the implementation. Save a copy in
+Drive, choose an A100 GPU if available, and set `CODE_COMMIT` to the full commit
+SHA. The notebook clones that exact code, restores the prepared archive from
+Drive, creates case-separated manifests, checks geometry, stages the pinned
+backbone, and runs the four-row diagnostic before full training. Run cells
+individually and inspect both geometry and overfit overlays. For private GitHub
+repositories, set `PRIVATE_REPO=True` and enable a read-only `GITHUB_TOKEN` in
+Colab Secrets. Keep `CODE_COMMIT` and `RUN_NAME` unchanged on resume; checkpoints
+and source provenance persist under `MyDrive/MedMeasure/<RUN_NAME>/`.
 
 Use a separate Python 3.11 environment with `requirements-v1.txt`. The commands
 below assume the repository root, the existing processed data at `data/medvision`,
@@ -85,6 +100,68 @@ device is CUDA with a bfloat16 backbone and float32 decoder. GPU memory/runtime
 requirements for the released 7B backbone have not been measured. CPU float32 is
 available explicitly, but local checks use tiny random models, not the 7B weights.
 
+## Persistent frozen-feature cache
+
+For the frozen first run, extract training/validation features once, then reuse
+them every epoch. This is optional; uncached training and test evaluation retain
+their existing paths. The Colab notebook has not been changed to use this cache.
+
+```bash
+# Run on a GPU after geometry and the four-row overfit diagnostic pass.
+.venv-v1/bin/python scripts/version1.py cache-features \
+  --data-root data/medvision \
+  --manifests runs/local-data-preparation-fixed/audit \
+  --output runs/v1-features --local-files-only
+
+# Decoder-only training: no backbone weights/processor are loaded.
+.venv-v1/bin/python scripts/version1.py train \
+  --data-root data/medvision \
+  --manifests runs/local-data-preparation-fixed/audit \
+  --feature-cache runs/v1-features --output runs/v1-cached --epochs 1
+```
+
+Use `--epochs 10` for a fresh ten-epoch run once timing is established, or resume
+from completed epochs with `--resume`, keeping `--feature-cache` unchanged.
+Training still uses the CUDA decoder by default and preserves case-separated
+validation and checkpoint selection. The entire feature cache need not fit RAM:
+one row is loaded at a time.
+
+Extraction saves the four restored vision maps and question-conditioned query
+**without changing their tensor dtype or values**. It also saves rendered RGB,
+native target masks and spacing to avoid repeatedly decompressing CT/mask volumes
+during training. Targets are stored only after the image/question forward pass;
+they do not enter the backbone. Only training and validation rows are extracted;
+test rows and evaluation are not cached.
+
+Each completed row is saved atomically. Rerun the same extraction command after
+interruption to verify/reuse saved rows and continue missing ones. Use
+`--max-rows 100` to extract at most 100 **new** rows per invocation (zero means all
+remaining rows). Partial extraction exits successfully with an explicit incomplete
+message, but training refuses the cache until `complete.json` exists. Run only
+one extraction job per cache directory; no concurrent writer support is provided.
+Corrupt rows are rejected, not silently regenerated.
+
+The first row prints a projected total cache size; completion records actual
+bytes. Check disk **quota** before the full pass: filesystem free-space checks do
+not know your ICE user quota. Cache storage is additional to scans and weights.
+Four 1280-channel 32×32 bfloat16 maps alone are 10 MiB per row, about 80 GiB over
+8,160 rows; native images/masks and serialization add more. This is a dimensional
+estimate, not measured released-backbone cache usage. Float32 features double the
+map storage. Cache extraction still needs the full backbone on the GPU.
+
+Cache identity checks model/dataset pins, exact train/validation rows, source
+image/mask checksums, feature layers, question, processor pixel settings, backbone
+dtype, extraction source hashes, and Torch/Transformers versions. Source volumes
+are hashed once at the start of each invocation; they remain required for that
+integrity check. Every loaded cache entry has its checksum verified. A mismatch
+requires a new cache directory. Decoder settings such as learning rate can change
+for a fresh run without re-extraction; existing resume checks still apply.
+
+Do not reuse these caches for backbone adaptation, varying image augmentation,
+or a different image/question preprocessing route. Disk caching introduces no
+feature quantization, but released-model/GPU equivalence and throughput still
+need verification. Training run/checkpoint metadata records the cache identity.
+
 ## Splits, checkpoints, and outputs
 
 Before loading weights, the CLI verifies the annotation plan checksum, exact
@@ -131,11 +208,15 @@ research steps.
 .venv-v1/bin/python -m unittest discover -s tests -p test_version1.py -v
 ```
 
-Six offline tests cover non-square/multi-window spatial restoration, target-vector
+Seven offline tests cover non-square/multi-window spatial restoration, target-vector
 parity with the original Hugging Face multimodal forward, question conditioning,
 decoder gradients with a frozen backbone, synthetic small-mask overfitting,
 checkpoint serialization, training/resume/evaluation, official split rejection,
-and failure/coverage denominators. The workflow check uses actual tiny randomly
+and failure/coverage denominators. Persistent-cache checks cover lossless
+bfloat16 roundtrip, interrupted extraction/resume, test-row exclusion, stale
+question/source rejection, corruption checks, exact two-epoch decoder-weight
+parity, and cached train/resume with backbone and scan loading blocked.
+The workflow check uses actual tiny randomly
 initialized Qwen2.5-VL modules and a processor stub, not released weights.
 
 Three real training slices spanning reference sizes matched pinned upstream

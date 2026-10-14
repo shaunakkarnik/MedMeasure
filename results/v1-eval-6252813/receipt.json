@@ -1,0 +1,8 @@
+{
+  "summary_source": "User-pasted full ICE evaluation summary; no direct cluster read",
+  "evaluation_job": 6252813,
+  "expected_checkpoint": "runs/v1-cached-6251584/best.pt",
+  "expected_code_commit": "052bf4aad6fc4c4920777b23f157fe579c5378b0",
+  "baseline_commit": "1866d3c3c1b1ad61d021e8f1e117004dad98e752",
+  "verification": "Summary arithmetic checked; baseline summaries read at merged commit. Version 1 predictions/run/checkpoint not retrieved; paired-row and provenance audits pending."
+}

@@ -47,6 +47,35 @@ class Version1ModelTests(unittest.TestCase):
     def setUpClass(cls):
         torch.set_num_threads(1)
 
+    def test_released_nested_text_config_with_pinned_transformers(self):
+        from transformers import GenerationConfig
+        from scripts.version1 import load_backbone_config
+
+        # Exact public config from the pinned MedVision checkpoint; no weights.
+        fixture = Path(__file__).parent / 'fixtures/medvision-v0-config'
+        original = Qwen2_5_VLConfig.from_pretrained(fixture, local_files_only=True)
+        with self.assertRaises(AttributeError):
+            GenerationConfig.from_model_config(original)
+        fixed = load_backbone_config({'model_repo': str(fixture), 'model_revision': None}, True)
+        expected = original.to_dict()
+        expected.pop('text_config')
+        self.assertEqual(fixed.to_dict(), expected)
+        self.assertIs(fixed.get_text_config(decoder=True), fixed)
+        self.assertEqual(GenerationConfig.from_model_config(fixed).eos_token_id, 151645)
+        # Exercise real model construction with the same duplicated config shape.
+        tiny = tiny_backbone().config.to_dict()
+        tiny['text_config'] = {key: tiny[key] for key in ('hidden_size', 'vocab_size')}
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / 'config.json'
+            path.write_text(json.dumps(tiny))
+            pin = {'model_repo': directory, 'model_revision': None}
+            model = Qwen2_5_VLForConditionalGeneration(load_backbone_config(pin, True))
+            self.assertEqual(model.config.hidden_size, tiny['hidden_size'])
+            tiny['text_config']['hidden_size'] += 1
+            path.write_text(json.dumps(tiny))
+            with self.assertRaisesRegex(ValueError, 'hidden_size'):
+                load_backbone_config(pin, True)
+
     def test_restore_both_window_and_merge_packing(self):
         height, width, merge = 6, 8, 2
         raster = torch.arange(height * width).reshape(height, width, 1)
@@ -161,6 +190,104 @@ class Version1MeasurementTests(unittest.TestCase):
 
 
 class Version1WorkflowTests(unittest.TestCase):
+    def test_persistent_cache_resume_parity_and_decoder_only_training(self):
+        import random
+        from PIL import Image
+        from medmeasure.version1_cache import FeatureCache, build_cache, contract
+        from scripts.version1 import train, load_decoder
+
+        torch.set_num_threads(1)
+        torch.manual_seed(8)
+        maps, query = FrozenMedVisionFeatures(tiny_backbone(), [0, 1])(tiny_inputs())
+        # Include the production feature dtype in the lossless roundtrip check.
+        maps = [x.to(torch.bfloat16) for x in maps]
+        query = query.to(torch.bfloat16)
+        mask = np.zeros((24, 32), dtype=bool)
+        mask[6:18, 9:23] = True
+        image = Image.fromarray(np.full((24, 32, 3), 70, dtype=np.uint8))
+        item = (maps, query, torch.from_numpy(mask).float()[None, None], image,
+                np.array([1.2, .8]), mask)
+        config = {'vision_layers': [0, 1], 'decoder_dim': 16, 'attention_heads': 4,
+                  'min_pixels': 192, 'max_pixels': 192, 'question': 'Segment tumor.',
+                  'threshold': .5, 'learning_rate': .001, 'seed': 8}
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            dataset = root / 'Datasets/KiTS23'
+            dataset.mkdir(parents=True)
+            # Source hashing is independent of tensor extraction. The callback
+            # supplies features from real tiny Qwen modules without scan loading.
+            (dataset / 'image.bin').write_bytes(b'image-source')
+            (dataset / 'mask.bin').write_bytes(b'mask-source')
+            manifests = {name: [{'sample_id': name, 'case_id': name,
+                                'image_file': 'image.bin', 'mask_file': 'mask.bin'}]
+                         for name in ('train', 'validation', 'test')}
+            cases = {name: [name] for name in manifests}
+            pin = {'model_revision': 'tiny-test'}
+            args = SimpleNamespace(data_root=root, output=root / 'cache', dtype='bfloat16',
+                                   device='cpu', max_rows=1, feature_cache=None,
+                                   epochs=2, overfit_rows=0, overlays=1, resume=None)
+            extractor = unittest.mock.Mock(return_value=item)
+            loader = unittest.mock.Mock(return_value=(None, object(), object()))
+            build_cache(args, config, pin, manifests, loader, extractor)
+            self.assertEqual(extractor.call_count, 1)
+            self.assertFalse((args.output / 'complete.json').exists())
+            expected = contract(config, pin, manifests, root, args.dtype)
+            with self.assertRaisesRegex(ValueError, 'incomplete'):
+                FeatureCache(args.output, expected)
+            args.max_rows = 0
+            build_cache(args, config, pin, manifests, loader, extractor)
+            self.assertEqual(extractor.call_count, 2)
+            self.assertEqual([c.args[0]['sample_id'] for c in extractor.call_args_list], ['train', 'validation'])
+            build_cache(args, config, pin, manifests, loader, extractor)
+            self.assertEqual(extractor.call_count, 2)  # Complete cache never extracts again.
+            cache = FeatureCache(args.output, expected)
+            restored = cache.read(manifests['train'][0])
+            for original, saved in zip([*maps, query], [*restored[0], restored[1]]):
+                self.assertEqual(original.dtype, saved.dtype)
+                self.assertTrue(torch.equal(original, saved))
+            self.assertTrue(np.array_equal(np.asarray(image), np.asarray(restored[3])))
+            self.assertTrue(np.array_equal(item[4], restored[4]))
+            self.assertTrue(np.array_equal(mask, restored[5]))
+
+            metadata = {'manifest_sha256': {'train': 'fixture'}, 'overfit_rows': 0}
+            def models(*unused):
+                return None, None, load_decoder(32, 32, config, 'cpu')
+            random.seed(8)
+            torch.manual_seed(8)
+            cache_dir = args.output
+            args.output = root / 'fresh-training'
+            with patch('scripts.version1.load_model', side_effect=models), \
+                    patch('scripts.version1.sample', return_value=item):
+                train(args, config, pin, manifests, cases, dict(metadata), None)
+            fresh = torch.load(args.output / 'last.pt', weights_only=True)
+            random.seed(8)
+            torch.manual_seed(8)
+            args.output = root / 'cached-training'
+            args.feature_cache = cache_dir
+            with patch('scripts.version1.load_model', side_effect=AssertionError('Backbone must not load')), \
+                    patch('scripts.version1.sample', side_effect=AssertionError('Scans must not load')):
+                train(args, config, pin, manifests, cases, dict(metadata), None)
+                cached = torch.load(args.output / 'last.pt', weights_only=True)
+                for key in fresh['decoder']:
+                    self.assertTrue(torch.equal(fresh['decoder'][key], cached['decoder'][key]), key)
+                self.assertIn('feature_cache', cached['metadata'])
+                args.resume = args.output / 'last.pt'
+                args.output = root / 'cached-resumed'
+                args.epochs = 3
+                train(args, config, pin, manifests, cases, dict(metadata), cached)
+                self.assertEqual(torch.load(args.output / 'last.pt', weights_only=True)['epoch'], 3)
+
+            changed = contract({**config, 'question': 'Different target'}, pin, manifests, root, args.dtype)
+            with self.assertRaisesRegex(ValueError, 'differs'):
+                FeatureCache(cache_dir, changed)
+            (dataset / 'image.bin').write_bytes(b'changed-scan')
+            with self.assertRaisesRegex(ValueError, 'differs'):
+                FeatureCache(cache_dir, contract(config, pin, manifests, root, args.dtype))
+            path = cache.path(manifests['train'][0])
+            path.write_bytes(b'corrupt')
+            with self.assertRaisesRegex(ValueError, 'checksum'):
+                cache.read(manifests['train'][0])
+
     def test_training_resume_and_evaluation_with_tiny_real_backbone(self):
         import nibabel as nib
         from scripts.version1 import train, evaluate

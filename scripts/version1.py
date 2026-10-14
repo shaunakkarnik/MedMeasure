@@ -13,33 +13,58 @@ ROOT = Path(__file__).resolve().parents[1]
 def parser():
     p = argparse.ArgumentParser(description=__doc__)
     sub = p.add_subparsers(dest='command', required=True)
-    for name in ('train', 'evaluate'):
+    for name in ('train', 'evaluate', 'cache-features'):
         command = sub.add_parser(name)
         command.add_argument('--data-root', type=Path, required=True,
                              help='Prepared data root containing metadata/ and Datasets/KiTS23/')
         command.add_argument('--manifests', type=Path, required=True, help='Audited split directory')
-        command.add_argument('--output', type=Path, required=True, help='New run directory')
+        command.add_argument('--output', type=Path, required=True, help='Run directory, or resumable feature-cache directory')
         command.add_argument('--device', default='cuda', choices=('cuda', 'cpu'))
         command.add_argument('--dtype', default='bfloat16', choices=('bfloat16', 'float32'))
         command.add_argument('--local-files-only', action='store_true')
         command.add_argument('--overlays', type=int, default=20)
-        if name == 'train':
+        if name in ('train', 'cache-features'):
             command.add_argument('--config', type=Path, default=ROOT / 'configs/version1-kits23.json')
+        if name == 'train':
             command.add_argument('--epochs', type=int, default=10)
             command.add_argument('--overfit-rows', type=int, default=0,
                                  help='Cache this many training rows and repeat; diagnostic only')
             command.add_argument('--resume', type=Path, help='Continue from last.pt in a new output directory')
+            command.add_argument('--feature-cache', type=Path,
+                                 help='Complete frozen train/validation cache; skips backbone loading')
+        elif name == 'cache-features':
+            command.add_argument('--max-rows', type=int, default=0,
+                                 help='Extract at most this many new rows; zero means all remaining rows')
         else:
             command.add_argument('--checkpoint', type=Path, required=True)
             command.add_argument('--limit', type=int, default=0, help='Nonzero makes a smoke run, not a full score')
     return p
 
 
+def load_backbone_config(pin, local_files_only):
+    from transformers import Qwen2_5_VLConfig
+
+    config = Qwen2_5_VLConfig.from_pretrained(
+        pin['model_repo'], revision=pin['model_revision'], local_files_only=local_files_only)
+    text_config = getattr(config, 'text_config', None)
+    if isinstance(text_config, dict):
+        # The released 4.56.1 config duplicates text settings here. In 4.51.3,
+        # Qwen uses top-level settings, but generation setup mistakes this dict
+        # for a config object. Preserve those settings and remove only the copy.
+        for name in ('vocab_size', 'hidden_size', 'intermediate_size', 'num_hidden_layers',
+                     'num_attention_heads', 'num_key_value_heads', 'hidden_act',
+                     'rms_norm_eps', 'rope_theta', 'rope_scaling', 'max_position_embeddings'):
+            if name in text_config and text_config[name] != getattr(config, name):
+                raise ValueError(f'Nested text_config differs from backbone config: {name}')
+        del config.text_config
+    return config
+
+
 def load_model(config, pin, args):
     import torch
     import transformers
     from transformers import AutoProcessor, Qwen2_5_VLForConditionalGeneration
-    from medmeasure.version1 import FrozenMedVisionFeatures, TargetMaskDecoder
+    from medmeasure.version1 import FrozenMedVisionFeatures
 
     if transformers.__version__ != '4.51.3':
         raise ValueError('Version 1 adapter requires transformers==4.51.3')
@@ -51,12 +76,18 @@ def load_model(config, pin, args):
         min_pixels=config['min_pixels'], max_pixels=config['max_pixels'])
     backbone = Qwen2_5_VLForConditionalGeneration.from_pretrained(
         pin['model_repo'], revision=pin['model_revision'], torch_dtype=dtype,
+        config=load_backbone_config(pin, args.local_files_only),
         attn_implementation='sdpa', local_files_only=args.local_files_only).to(args.device)
     features = FrozenMedVisionFeatures(backbone, config['vision_layers'])
-    decoder = TargetMaskDecoder(backbone.config.vision_config.hidden_size, backbone.config.hidden_size,
-                                len(config['vision_layers']), config['decoder_dim'],
-                                config['attention_heads']).to(args.device)
+    decoder = load_decoder(backbone.config.vision_config.hidden_size,
+                           backbone.config.hidden_size, config, args.device)
     return processor, features, decoder
+
+
+def load_decoder(vision_dim, language_dim, config, device):
+    from medmeasure.version1 import TargetMaskDecoder
+    return TargetMaskDecoder(vision_dim, language_dim, len(config['vision_layers']),
+                             config['decoder_dim'], config['attention_heads']).to(device)
 
 
 def sample(row, dataset_dir, processor, features, config, device):
@@ -75,7 +106,18 @@ def train(args, config, pin, manifests, case_splits, metadata, checkpoint):
     from medmeasure.version1 import segmentation_loss
     from medmeasure.version1_data import save_overlay
 
-    processor, features, decoder = load_model(config, pin, args)
+    disk_cache = None
+    if getattr(args, 'feature_cache', None):
+        from medmeasure.version1_cache import FeatureCache, contract
+        disk_cache = FeatureCache(args.feature_cache,
+            contract(config, pin, manifests, args.data_root, args.dtype))
+        dimensions = disk_cache.complete['dimensions']
+        decoder = load_decoder(dimensions['vision_dim'], dimensions['language_dim'], config, args.device)
+        metadata['feature_cache'] = {'contract_sha256': disk_cache.identity,
+                                    'directory': str(args.feature_cache.resolve()),
+                                    'bytes': disk_cache.complete['bytes']}
+    else:
+        processor, features, decoder = load_model(config, pin, args)
     optimizer = torch.optim.AdamW(decoder.parameters(), lr=config['learning_rate'])
     start, best = 0, float('inf')
     if checkpoint:
@@ -98,13 +140,15 @@ def train(args, config, pin, manifests, case_splits, metadata, checkpoint):
     dataset_dir = args.data_root / 'Datasets/KiTS23'
     train_rows = manifests['train'][:args.overfit_rows] if args.overfit_rows else manifests['train']
     cache = {}
-    if args.overfit_rows:
+    if args.overfit_rows and disk_cache is None:
         for row in train_rows:
             item = sample(row, dataset_dir, processor, features, config, args.device)
             cache[row['sample_id']] = ([x.cpu() for x in item[0]], item[1].cpu(),
                                        item[2].cpu(), *item[3:])
         print(f'Cached {len(cache)} frozen image/question feature sets for the overfit diagnostic.', flush=True)
     def get(row):
+        if disk_cache is not None:
+            return disk_cache.read(row)
         if row['sample_id'] in cache:
             return cache[row['sample_id']]
         return sample(row, dataset_dir, processor, features, config, args.device)
@@ -246,12 +290,15 @@ def main():
         p.error('Epochs must be positive and row/overlay limits nonnegative')
     if args.command == 'evaluate' and args.limit < 0:
         p.error('Limit must be nonnegative')
+    if args.command == 'cache-features' and args.max_rows < 0:
+        p.error('Cache row limit must be nonnegative')
     pin = json.loads((ROOT / 'configs/kits23-pilot.json').read_text())
-    path = args.resume if args.command == 'train' else args.checkpoint
+    path = (args.resume if args.command == 'train' else
+            args.checkpoint if args.command == 'evaluate' else None)
     checkpoint = torch.load(path, map_location='cpu', weights_only=True) if path else None
     if checkpoint and (checkpoint['format_version'] != 1 or checkpoint['pin'] != pin):
         raise ValueError('Checkpoint format or dataset/model pins differ')
-    config = (json.loads(args.config.read_text()) if args.command == 'train' else checkpoint['config'])
+    config = (checkpoint['config'] if args.command == 'evaluate' else json.loads(args.config.read_text()))
     if checkpoint and checkpoint['config'] != config:
         raise ValueError('Resume configuration differs from checkpoint')
     if not 0 < config['threshold'] < 1:
@@ -266,6 +313,12 @@ def main():
     if manifests['test'] != official_test:
         raise ValueError('test.jsonl must contain the complete ordered official selection')
     manifest_hashes = {name: sha256(args.manifests / f'{name}.jsonl') for name in manifests}
+    if args.command == 'cache-features':
+        from medmeasure.version1_cache import build_cache
+        random.seed(config['seed'])
+        torch.manual_seed(config['seed'])
+        build_cache(args, config, pin, manifests, load_model, sample)
+        return
     if args.command == 'train' and checkpoint:
         if checkpoint['metadata']['manifest_sha256'] != manifest_hashes:
             raise ValueError('Resume manifests differ from checkpoint')
@@ -277,6 +330,7 @@ def main():
     metadata = {'config': config, 'pin': pin, 'manifest_sha256': manifest_hashes,
                 'source_sha256': {name: sha256(ROOT / name) for name in
                     ('scripts/version1.py', 'medmeasure/version1.py', 'medmeasure/version1_data.py',
+                     'medmeasure/version1_cache.py',
                      'medmeasure/geometry.py', 'requirements-v1.txt')},
                 'case_splits': case_splits, 'torch': str(torch.__version__),
                 'device': args.device, 'dtype': args.dtype,

@@ -1,0 +1,148 @@
+{
+  "manifest_sha256": "0698c7e35b9e02ae97cfcf7302dd56120be458095e692ed3ebe22217a006f876",
+  "baseline_ref": "1866d3c3c1b1ad61d021e8f1e117004dad98e752",
+  "baseline_shard_logs": 32,
+  "groups": {
+    "all": {
+      "total": 3179,
+      "cases": 147,
+      "baseline_successes": 3179,
+      "version1_successes": 3032,
+      "baseline_below10_all_rows": 0.2538534130229632,
+      "version1_below10_all_rows": 0.4391318024536018,
+      "below10_contingency": {
+        "both": 472,
+        "baseline_only": 335,
+        "version1_only": 924,
+        "neither": 1448
+      },
+      "both_successful": {
+        "total": 3032,
+        "baseline_mae_mm": 11.627192408868694,
+        "version1_mae_mm": 6.6233428038440465,
+        "baseline_mre": 0.3951230780099095,
+        "version1_mre": 0.24512126835285547,
+        "version1_lower_mre": 1958,
+        "version1_higher_mre": 1074,
+        "equal_mre": 0,
+        "case_macro_baseline_mre": 0.442581418318505,
+        "case_macro_version1_mre": 0.288649120937225,
+        "cases_with_paired_success": 147
+      }
+    },
+    "legacy_disjoint": {
+      "total": 825,
+      "cases": 43,
+      "baseline_successes": 825,
+      "version1_successes": 773,
+      "baseline_below10_all_rows": 0.11636363636363636,
+      "version1_below10_all_rows": 0.38303030303030305,
+      "below10_contingency": {
+        "both": 49,
+        "baseline_only": 47,
+        "version1_only": 267,
+        "neither": 462
+      },
+      "both_successful": {
+        "total": 773,
+        "baseline_mae_mm": 12.359812996520107,
+        "version1_mae_mm": 7.0742605761136925,
+        "baseline_mre": 0.5073576930339022,
+        "version1_mre": 0.30792809973537133,
+        "version1_lower_mre": 558,
+        "version1_higher_mre": 215,
+        "equal_mre": 0,
+        "case_macro_baseline_mre": 0.5285506010195171,
+        "case_macro_version1_mre": 0.3123301717381643,
+        "cases_with_paired_success": 43
+      }
+    },
+    "<10mm": {
+      "total": 123,
+      "cases": 53,
+      "baseline_successes": 123,
+      "version1_successes": 83,
+      "baseline_below10_all_rows": 0,
+      "version1_below10_all_rows": 0.024390243902439025,
+      "below10_contingency": {
+        "both": 0,
+        "baseline_only": 0,
+        "version1_only": 3,
+        "neither": 120
+      },
+      "both_successful": {
+        "total": 83,
+        "baseline_mae_mm": 17.950555594570666,
+        "version1_mae_mm": 6.607168637126325,
+        "baseline_mre": 3.4069848466815933,
+        "version1_mre": 1.144570876599708,
+        "version1_lower_mre": 76,
+        "version1_higher_mre": 7,
+        "equal_mre": 0,
+        "case_macro_baseline_mre": 3.3695726911913533,
+        "case_macro_version1_mre": 1.2117010481792374,
+        "cases_with_paired_success": 46
+      }
+    },
+    "10-to-20mm": {
+      "total": 442,
+      "cases": 103,
+      "baseline_successes": 442,
+      "version1_successes": 397,
+      "baseline_below10_all_rows": 0.06108597285067873,
+      "version1_below10_all_rows": 0.12669683257918551,
+      "below10_contingency": {
+        "both": 5,
+        "baseline_only": 22,
+        "version1_only": 51,
+        "neither": 364
+      },
+      "both_successful": {
+        "total": 397,
+        "baseline_mae_mm": 10.362808625103545,
+        "version1_mae_mm": 6.9855556094676485,
+        "baseline_mre": 0.8166321371994892,
+        "version1_mre": 0.5196213131481793,
+        "version1_lower_mre": 286,
+        "version1_higher_mre": 111,
+        "equal_mre": 0,
+        "case_macro_baseline_mre": 0.8527849547529441,
+        "case_macro_version1_mre": 0.567641297409341,
+        "cases_with_paired_success": 98
+      }
+    },
+    ">=20mm": {
+      "total": 2614,
+      "cases": 139,
+      "baseline_successes": 2614,
+      "version1_successes": 2552,
+      "baseline_below10_all_rows": 0.29839326702371843,
+      "version1_below10_all_rows": 0.5114766641162969,
+      "below10_contingency": {
+        "both": 467,
+        "baseline_only": 313,
+        "version1_only": 870,
+        "neither": 964
+      },
+      "both_successful": {
+        "total": 2552,
+        "baseline_mae_mm": 11.618227368798749,
+        "version1_mae_mm": 6.5675214762598,
+        "baseline_mre": 0.23159501245426178,
+        "version1_mre": 0.17316561189978638,
+        "version1_lower_mre": 1596,
+        "version1_higher_mre": 956,
+        "equal_mre": 0,
+        "case_macro_baseline_mre": 0.24382038110858595,
+        "case_macro_version1_mre": 0.21108210739621336,
+        "cases_with_paired_success": 139
+      }
+    }
+  },
+  "notes": [
+    "MAE/MRE are upstream baseline scores, not re-parsed answers.",
+    "Answer tags are extracted for display only.",
+    "Both-successful metrics use identical rows; excluded failures remain in all-row accuracy.",
+    "Case macro means weight included cases equally; no statistical uncertainty estimated."
+  ]
+}

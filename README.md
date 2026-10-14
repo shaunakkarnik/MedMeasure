@@ -3,6 +3,9 @@ Medical VLM for quantitative measurement tasks
 
 The [Version 1 pilot guide](docs/version1.md) describes the frozen MedVision-V0
 mask decoder, training, small-batch overfitting, and mask-derived evaluation.
+For fresh Colab training, use the [Version 1 training notebook](notebooks/medmeasure_v1_training.ipynb).
+Commit/push the code, set its full Git SHA in `CODE_COMMIT`, and run the cells
+individually. Prepared scans and checkpoints live on Drive.
 
 See the [project context and plan](docs/project-plan.md) for the research goals, proposed architectures, and implementation sequence.
 

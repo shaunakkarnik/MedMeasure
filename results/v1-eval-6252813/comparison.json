@@ -1,0 +1,66 @@
+{
+  "all": {
+    "baseline": {
+      "total": 3179,
+      "finite_successes": 3179,
+      "failures": 0,
+      "mae_mm_success_only": 11.587070128946943,
+      "mre_fraction_success_only": 0.4405953787094773,
+      "success_fraction": 1.0,
+      "below_10_percent_fraction_all_rows": 0.2538534130229632,
+      "below_10_percent_fraction_success_only": 0.2538534130229632
+    },
+    "version1": {
+      "total": 3179,
+      "finite_successes": 3032,
+      "failures": 147,
+      "status_counts": {
+        "empty_mask": 104,
+        "success": 3032,
+        "failed_fit": 43
+      },
+      "mae_mm_success_only": 6.6233428038440465,
+      "mre_fraction_success_only": 0.2451212683528555,
+      "success_fraction": 0.9537590437244416,
+      "below_10_percent_fraction_all_rows": 0.4391318024536018,
+      "below_10_percent_fraction_success_only": 0.4604221635883905,
+      "dice_mean_all_rows": 0.6616809474515727,
+      "iou_mean_all_rows": 0.576102559686862
+    },
+    "below_10_percent_count": 1396,
+    "baseline_below_10_percent_count": 807,
+    "improvement_percentage_points": 18.527838943063855
+  },
+  "legacy_disjoint": {
+    "baseline": {
+      "total": 825,
+      "finite_successes": 825,
+      "failures": 0,
+      "mae_mm_success_only": 12.223954568053736,
+      "mre_fraction_success_only": 0.5568031245389754,
+      "success_fraction": 1.0,
+      "below_10_percent_fraction_all_rows": 0.11636363636363636,
+      "below_10_percent_fraction_success_only": 0.11636363636363636
+    },
+    "version1": {
+      "total": 825,
+      "finite_successes": 773,
+      "failures": 52,
+      "status_counts": {
+        "success": 773,
+        "empty_mask": 36,
+        "failed_fit": 16
+      },
+      "mae_mm_success_only": 7.0742605761136925,
+      "mre_fraction_success_only": 0.30792809973537133,
+      "success_fraction": 0.936969696969697,
+      "below_10_percent_fraction_all_rows": 0.38303030303030305,
+      "below_10_percent_fraction_success_only": 0.4087968952134541,
+      "dice_mean_all_rows": 0.5986304126354881,
+      "iou_mean_all_rows": 0.5140752882296575
+    },
+    "below_10_percent_count": 316,
+    "baseline_below_10_percent_count": 96,
+    "improvement_percentage_points": 26.66666666666667
+  }
+}
