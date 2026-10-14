@@ -1,0 +1,22 @@
+[
+  "/content/medmeasure-venv/bin/python",
+  "-m",
+  "lmms_eval",
+  "--model",
+  "vllm_qwen25vl",
+  "--model_args",
+  "model_hf=/content/MedVision-V0-7B,tensor_parallel_size=1,max_num_seqs=1,gpu_memory_utilization=0.9,max_new_tokens=4096,dtype=auto,reshape_image_hw=512x512,hf_overrides={\"vision_start_token_id\":151652},system_prompt=[\"A conversation between a User and an Assistant. The User asks a question, and the Assistant solves it. The Assistant first thinks through the reasoning process internally, then provides the User with the answer. The reasoning process and the final answer must be enclosed within <think> </think> and <answer> </answer> tags, respectively. For example: <think> reasoning process here </think> <answer> answer here </answer>. Within the <think> </think> tags, report the reasoning process for each step inside <step-k-reasoning> </step-k-reasoning> tags, followed by the intermediate results in <step-k-answer> </step-k-answer> tags. For example: <think> <step-1-reasoning> reasoning for step 1 </step-1-reasoning> <step-1-answer> intermediate result from step 1 </step-1-answer> </think>.\"]",
+  "--include_path",
+  "/content/drive/MyDrive/MedMeasure/kits23-medvision-v0-v140-rik/evaluation/chunks/shard-000/attempt-001/task_definition",
+  "--tasks",
+  "MedMeasure_KiTS23_TL_Axial",
+  "--batch_size",
+  "1",
+  "--limit",
+  "10",
+  "--log_samples",
+  "--output_path",
+  "/content/drive/MyDrive/MedMeasure/kits23-medvision-v0-v140-rik/evaluation/chunks/shard-000/attempt-001/results",
+  "--sample_indices",
+  "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99]"
+]

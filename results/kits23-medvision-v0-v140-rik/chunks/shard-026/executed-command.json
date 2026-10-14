@@ -1,0 +1,22 @@
+[
+  "/content/medmeasure-venv/bin/python",
+  "-m",
+  "lmms_eval",
+  "--model",
+  "vllm_qwen25vl",
+  "--model_args",
+  "model_hf=/content/MedVision-V0-7B,tensor_parallel_size=1,max_num_seqs=1,gpu_memory_utilization=0.9,max_new_tokens=4096,dtype=auto,reshape_image_hw=512x512,hf_overrides={\"vision_start_token_id\":151652},system_prompt=[\"A conversation between a User and an Assistant. The User asks a question, and the Assistant solves it. The Assistant first thinks through the reasoning process internally, then provides the User with the answer. The reasoning process and the final answer must be enclosed within <think> </think> and <answer> </answer> tags, respectively. For example: <think> reasoning process here </think> <answer> answer here </answer>. Within the <think> </think> tags, report the reasoning process for each step inside <step-k-reasoning> </step-k-reasoning> tags, followed by the intermediate results in <step-k-answer> </step-k-answer> tags. For example: <think> <step-1-reasoning> reasoning for step 1 </step-1-reasoning> <step-1-answer> intermediate result from step 1 </step-1-answer> </think>.\"]",
+  "--include_path",
+  "/content/drive/MyDrive/MedMeasure/kits23-medvision-v0-v140-rik/evaluation/chunks/shard-026/attempt-001/task_definition",
+  "--tasks",
+  "MedMeasure_KiTS23_TL_Axial",
+  "--batch_size",
+  "1",
+  "--limit",
+  "10",
+  "--log_samples",
+  "--output_path",
+  "/content/drive/MyDrive/MedMeasure/kits23-medvision-v0-v140-rik/evaluation/chunks/shard-026/attempt-001/results",
+  "--sample_indices",
+  "[2600, 2601, 2602, 2603, 2604, 2605, 2606, 2607, 2608, 2609, 2610, 2611, 2612, 2613, 2614, 2615, 2616, 2617, 2618, 2619, 2620, 2621, 2622, 2623, 2624, 2625, 2626, 2627, 2628, 2629, 2630, 2631, 2632, 2633, 2634, 2635, 2636, 2637, 2638, 2639, 2640, 2641, 2642, 2643, 2644, 2645, 2646, 2647, 2648, 2649, 2650, 2651, 2652, 2653, 2654, 2655, 2656, 2657, 2658, 2659, 2660, 2661, 2662, 2663, 2664, 2665, 2666, 2667, 2668, 2669, 2670, 2671, 2672, 2673, 2674, 2675, 2676, 2677, 2678, 2679, 2680, 2681, 2682, 2683, 2684, 2685, 2686, 2687, 2688, 2689, 2690, 2691, 2692, 2693, 2694, 2695, 2696, 2697, 2698, 2699]"
+]

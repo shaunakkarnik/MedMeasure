@@ -2,6 +2,7 @@
 
 ## Current focus and decisions
 
+- Git: local Version 1 commit and remote baseline PR #1 reconciled by a conflict-free merge on October 14. Repository-local `pull.rebase=false` selects merges for future pulls.
 - Version 1 frozen-backbone KiTS23 specialist is implemented: four restored intermediate vision maps plus image/question target state, query-conditioned mask decoder, BCE + Dice, and native-grid physical ellipse measurements. No answer/localization ground truth enters inference. [Version 1 guide](docs/version1.md); research sequence remains in [project plan](docs/project-plan.md).
 - Current execution route is **local CPU preparation → Georgia Tech ICE (CS 8803 VLM) → cached decoder training**. Colab remains an alternative. [ICE guide](docs/ice-version1.md), [local-to-Colab guide](docs/local-to-colab.md), [pilot pins](configs/kits23-pilot.json).
 - ICE code pin: **`052bf4aad6fc4c4920777b23f157fe579c5378b0`**, packaged in `/tmp/medmeasure-ice.bundle`; metadata/checksum in `/tmp/medmeasure-ice.bundle.json`. This is a snapshot commit in a temporary checkout, including caching, ICE scripts and merged baseline PR #1; local branch/uncommitted edits remain intact. Bundle clone/content verification passed.
