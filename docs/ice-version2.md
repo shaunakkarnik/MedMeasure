@@ -14,6 +14,48 @@ float16 references and the baseline's MAE, MRE, and within-10% definitions.
 The rendering, decoding implementation, and local parser differ from the historical upstream run.
 Evaluate frozen MedVision under the V2 protocol for a matched starting point.
 
+## Prepare a fresh ICE environment
+
+Place the checkout at `$WORK/MedMeasure`. Place prepared scans under
+`$WORK/data/medvision/Datasets/KiTS23` and annotation plans under
+`$WORK/data/medvision/metadata`. Restore a portable archive using the
+[prepared-data guide](local-to-colab.md). A format-1 Colab backup must have
+its checksum verified before extracting `./Datasets` and `./metadata`
+into this layout. It records its original Colab path.
+
+From the checkout, create the environment and build the split manifests.
+Use your own scratch directory for `WORK`.
+
+```bash
+WORK="$(cd .. && pwd)"
+module load python/3.11.9
+python -m venv .venv-v1
+.venv-v1/bin/python -m pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cu124
+.venv-v1/bin/python -m pip install -r requirements-v1.txt matplotlib==3.9.2
+
+.venv-v1/bin/python scripts/prepare_data.py \
+  --plan "$WORK/data/medvision/metadata/benchmark_plan_biometry_v1.4.0.json.gz" \
+  --legacy-plan "$WORK/data/medvision/metadata/benchmark_plan_biometry_v1.0.0.json.gz" \
+  --legacy-plan "$WORK/data/medvision/metadata/benchmark_plan_biometry_v1.1.1.json.gz" \
+  --output "$WORK/audit"
+```
+
+The manifest builder requires a new output directory. The expected row counts
+are 6,897 train, 1,263 validation, and 3,179 test. Download model weights once
+from a node with network access before submitting offline GPU jobs.
+
+```bash
+export HF_HOME="$WORK/hf-cache"
+.venv-v1/bin/python -u - <<'PYTHON'
+import json
+from pathlib import Path
+from huggingface_hub import snapshot_download
+
+pin = json.loads(Path("configs/kits23-pilot.json").read_text())
+print(snapshot_download(pin["model_repo"], revision=pin["model_revision"], max_workers=1))
+PYTHON
+```
+
 ## Copy the V2 files to ICE
 
 The commands assume the existing ICE V1 checkout and its `.venv-v1`,
@@ -24,7 +66,7 @@ the same SSH destination you used to log in to ICE.
 ```bash
 tar -czf /tmp/medmeasure-v2.tar.gz \
   configs/version2-kits23.json configs/version2-prompts.json medmeasure/version2.py scripts/version2.py \
-  cluster/ice-v2.sbatch --partition=ice-gpu --gres=gpu:l40s:1 --constraint=L40S docs/ice-version2.md
+  cluster/ice-v2.sbatch docs/ice-version2.md
 scp /tmp/medmeasure-v2.tar.gz YOUR_ICE_SSH_DESTINATION:~/medmeasure-v2.tar.gz
 ```
 
@@ -39,8 +81,8 @@ cd "$WORK/MedMeasure"
 git switch -c codex/version2
 tar -xzf ~/medmeasure-v2.tar.gz
 mkdir -p logs
-sbatch --partition=ice-gpu --gres=gpu:l40s:1 --constraint=L40S --time=00:30:00 cluster/ice-v2.sbatch --partition=ice-gpu --gres=gpu:l40s:1 --constraint=L40S train --objective joint --epochs 1 --limit 16
-sbatch --partition=ice-gpu --gres=gpu:l40s:1 --constraint=L40S --time=00:30:00 cluster/ice-v2.sbatch --partition=ice-gpu --gres=gpu:l40s:1 --constraint=L40S train --objective text --epochs 1 --limit 16
+sbatch --partition=ice-gpu --gres=gpu:l40s:1 --constraint=L40S --time=00:30:00 cluster/ice-v2.sbatch train --objective joint --epochs 1 --limit 16
+sbatch --partition=ice-gpu --gres=gpu:l40s:1 --constraint=L40S --time=00:30:00 cluster/ice-v2.sbatch train --objective text --epochs 1 --limit 16
 ```
 
 Use `squeue -u "$USER"` to monitor and `tail -f logs/medmeasure-v2-JOBID.out`
@@ -56,8 +98,8 @@ One full epoch per arm gives an initial matched comparison and measures runtime
 before committing more GPU hours.
 
 ```bash
-sbatch --partition=ice-gpu --gres=gpu:l40s:1 --constraint=L40S cluster/ice-v2.sbatch --partition=ice-gpu --gres=gpu:l40s:1 --constraint=L40S train --objective text --epochs 1
-sbatch --partition=ice-gpu --gres=gpu:l40s:1 --constraint=L40S cluster/ice-v2.sbatch --partition=ice-gpu --gres=gpu:l40s:1 --constraint=L40S train --objective joint --epochs 1
+sbatch --partition=ice-gpu --gres=gpu:l40s:1 --constraint=L40S cluster/ice-v2.sbatch train --objective text --epochs 1
+sbatch --partition=ice-gpu --gres=gpu:l40s:1 --constraint=L40S cluster/ice-v2.sbatch train --objective joint --epochs 1
 ```
 
 To extend a completed run, resubmit with the same objective and pass
@@ -69,9 +111,9 @@ When the training budget and settings are fixed, run the following with the
 full training job IDs. All three commands use the official test selection.
 
 ```bash
-sbatch --partition=ice-gpu --gres=gpu:l40s:1 --constraint=L40S cluster/ice-v2.sbatch --partition=ice-gpu --gres=gpu:l40s:1 --constraint=L40S evaluate
-sbatch --partition=ice-gpu --gres=gpu:l40s:1 --constraint=L40S cluster/ice-v2.sbatch --partition=ice-gpu --gres=gpu:l40s:1 --constraint=L40S evaluate --checkpoint "$WORK/runs/v2-TEXT_JOBID/best.pt"
-sbatch --partition=ice-gpu --gres=gpu:l40s:1 --constraint=L40S cluster/ice-v2.sbatch --partition=ice-gpu --gres=gpu:l40s:1 --constraint=L40S evaluate --checkpoint "$WORK/runs/v2-JOINT_JOBID/best.pt"
+sbatch --partition=ice-gpu --gres=gpu:l40s:1 --constraint=L40S cluster/ice-v2.sbatch evaluate
+sbatch --partition=ice-gpu --gres=gpu:l40s:1 --constraint=L40S cluster/ice-v2.sbatch evaluate --checkpoint "$WORK/runs/v2-TEXT_JOBID/best.pt"
+sbatch --partition=ice-gpu --gres=gpu:l40s:1 --constraint=L40S cluster/ice-v2.sbatch evaluate --checkpoint "$WORK/runs/v2-JOINT_JOBID/best.pt"
 ```
 
 Compare the all-row within-10% rate and answer success rate from
