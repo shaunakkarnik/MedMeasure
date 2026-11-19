@@ -1,0 +1,20 @@
+{
+  "evidence": "User-pasted Slurm accounting and epoch-1.json, November 12, 2026. Row predictions and checkpoints not retrieved.",
+  "job_id": "6987247",
+  "objective": "text",
+  "state": "COMPLETED",
+  "exit_code": "0:0",
+  "elapsed": "04:04:48",
+  "epoch": 1,
+  "text_loss": 0.7714400700085126,
+  "mask_loss": null,
+  "validation": {
+    "total": 1263,
+    "finite_successes": 1263,
+    "failures": 0,
+    "mae_mm_success_only": 15.553433581380641,
+    "mre_fraction_success_only": 0.5140359185393402,
+    "below_10_percent_fraction_all_rows": 0.14726840855106887,
+    "within_10_percent_count": 186
+  }
+}

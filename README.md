@@ -17,10 +17,10 @@ training, and evaluation generates answers through the adapted VLM.
 
 ## Start here
 
-- [ICE setup and execution](docs/ice-version2.md) covers V2 training, validation,
-  resume, and evaluation.
-- [V2 code walkthrough](docs/version2.md) explains the shared features, losses,
-  trainable parameters, checkpoint contents, and scoring.
+- [V2 model and training](docs/version2.md) describes the two objectives and
+  links to ICE setup.
+- [Final V2 evaluation](docs/version2-aligned.md) covers setup, sharding, and
+  the four-method comparison. **The full evaluation is running and results are pending.**
 - [V1 guide](docs/version1.md) covers the frozen decoder and feature cache.
 - [Baseline and data audit](docs/baseline-and-data.md) describes the official
   baseline, dataset pins, and split exposure.
@@ -34,6 +34,7 @@ training, and evaluation generates answers through the adapted VLM.
 | `medmeasure/` | Model components, data contracts, geometry, and visualization helpers |
 | `scripts/version1.py` | V1 feature extraction, decoder training, and mask evaluation |
 | `scripts/version2.py` | V2 text/joint training and generated-answer evaluation |
+| `scripts/version2_original.py`, `scripts/compare_final_results.py` | Sharded image-first evaluation, merge, and paired comparison |
 | `scripts/prepare_data.py` | Case-separated manifests and legacy split audit |
 | `scripts/stage_data.py`, `scripts/stage_model.py` | Pinned dataset and model downloads |
 | `scripts/prepare_baseline.py`, `scripts/preflight_baseline.py`, `scripts/execute_baseline.py` | Official baseline preparation, checks, and inference |
@@ -73,14 +74,12 @@ GPU training requires the separately staged scans and pinned model weights.
 Prepared scans, model weights, feature caches, and training checkpoints live
 outside Git. Use the paths in the ICE guide for a new installation.
 `results/` retains the row-level evidence needed to rescore the reported V1
-and baseline runs. V2 full-run results are pending.
+and baseline runs, along with V2 validation and smoke summaries.
 
 Training and validation are separated by case within the official training
 split. The released backbone may have seen 104 official test cases through its
-historical sizing training split. Report the 43-case historical-disjoint
-diagnostic alongside full-test results. V2 uses V1 image rendering and a local
-text scorer, so evaluate frozen MedVision with the V2 protocol for its matched
-baseline. See the data audit and V2 walkthrough for the comparison limits.
+historical sizing training split. The final comparison reports the 43-case
+historical-disjoint diagnostic alongside full-test results.
 
 ## Earlier execution workflows
 

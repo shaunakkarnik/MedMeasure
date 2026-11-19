@@ -1,0 +1,28 @@
+{
+  "evidence": "User-pasted checked-merge summaries November17,2026. Inference receipts, per-row predictions, and Slurm accounting not yet retrieved.",
+  "complete_official_test": true,
+  "groups": {
+    "all": {
+      "total": 3179,
+      "finite_successes": 3129,
+      "failures": 50,
+      "mae_mm_success_only": 11.71279624580537,
+      "mre_fraction_success_only": 0.41881063120818557,
+      "success_fraction": 0.9842717835797421,
+      "below_10_percent_fraction_all_rows": 0.20478137779175842,
+      "below_10_percent_fraction_success_only": 0.2080536912751678,
+      "within_10_percent_count": 651
+    },
+    "legacy_disjoint": {
+      "total": 825,
+      "finite_successes": 804,
+      "failures": 21,
+      "mae_mm_success_only": 9.514472316153608,
+      "mre_fraction_success_only": 0.4434269294426596,
+      "success_fraction": 0.9745454545454545,
+      "below_10_percent_fraction_all_rows": 0.1903030303030303,
+      "below_10_percent_fraction_success_only": 0.19527363184079602,
+      "within_10_percent_count": 157
+    }
+  }
+}

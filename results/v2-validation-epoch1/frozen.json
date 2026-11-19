@@ -1,0 +1,19 @@
+{
+  "evidence": "User-pasted Slurm accounting and summary.json, November 15, 2026. Predictions and run contract not retrieved.",
+  "job_id": "6994719",
+  "objective": "frozen",
+  "state": "COMPLETED",
+  "exit_code": "0:0",
+  "elapsed": "06:18:12",
+  "validation": {
+    "total": 1263,
+    "finite_successes": 1262,
+    "failures": 1,
+    "mae_mm_success_only": 13.012442112930863,
+    "mre_fraction_success_only": 0.4742413459345964,
+    "success_fraction": 0.9992082343626286,
+    "below_10_percent_fraction_all_rows": 0.1417260490894695,
+    "below_10_percent_fraction_success_only": 0.14183835182250396,
+    "within_10_percent_count": 179
+  }
+}

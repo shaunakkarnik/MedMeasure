@@ -22,6 +22,11 @@ env/
 /external/
 /runs/
 /logs/
+/audit/
+/hf-cache/
+/pip-cache-original/
+/MedVision-original/
+/v1-features/
 **/response_cache/
 
 # Packaging artifacts

@@ -1,0 +1,21 @@
+{
+  "evidence": "User-pasted Slurm accounting and epoch summaries, November 16, 2026. Predictions and checkpoint bytes not retrieved.",
+  "job_id": "7087275",
+  "objective": "joint",
+  "epoch": 3,
+  "state": "COMPLETED",
+  "exit_code": "0:0",
+  "resumed_job_elapsed": "08:20:45",
+  "text_loss": 0.48924100333985443,
+  "mask_loss": 0.1757423121704128,
+  "new_best": true,
+  "validation": {
+    "total": 1263,
+    "finite_successes": 1260,
+    "failures": 3,
+    "mae_mm_success_only": 13.057416155133929,
+    "mre_fraction_success_only": 0.5586948048460487,
+    "below_10_percent_fraction_all_rows": 0.1916072842438638,
+    "within_10_percent_count": 242
+  }
+}
