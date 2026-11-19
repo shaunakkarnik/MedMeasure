@@ -42,7 +42,14 @@ def main():
         'hf_overrides='+json.dumps(overrides,separators=(',',':')),
         'system_prompt='+json.dumps([SYSTEM_PROMPT],separators=(',',':')),
     ])
-    command = [sys.executable,'-m','lmms_eval','--model','vllm_qwen25vl',
+    content_order = run.get('content_order', 'text_first')
+    if content_order == 'image_first':
+        command = [sys.executable, str(Path(__file__).with_name('image_first_benchmark.py'))]
+    elif content_order == 'text_first':
+        command = [sys.executable, '-m', 'lmms_eval']
+    else:
+        raise ValueError('Unknown benchmark content order')
+    command += ['--model','vllm_qwen25vl',
                '--model_args',model_args,'--include_path',str(task_dir),
                '--tasks','MedMeasure_KiTS23_TL_Axial','--batch_size','1',
                '--limit',str(run['requested_limit']),'--log_samples',

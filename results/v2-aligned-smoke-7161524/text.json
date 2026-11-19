@@ -1,0 +1,17 @@
+{
+  "evidence": "User-pasted Slurm accounting and benchmark logs November18,2026. First ten official test rows only; full predictions not retrieved.",
+  "array_job_id": "7161524",
+  "model": "text",
+  "state": "COMPLETED",
+  "exit_code": "0:0",
+  "elapsed": "00:02:25",
+  "content_order": "image_first",
+  "summary": {
+    "total": 10,
+    "finite_successes": 10,
+    "failures": 0,
+    "mae_mm_success_only": 14.6671875,
+    "mre_fraction_success_only": 0.3207300061413873,
+    "below_10_percent_fraction_all_rows": 0.3
+  }
+}

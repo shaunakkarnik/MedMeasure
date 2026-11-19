@@ -1,0 +1,19 @@
+{
+  "vision_layers": [
+    7,
+    15,
+    23,
+    31
+  ],
+  "decoder_dim": 128,
+  "attention_heads": 4,
+  "min_pixels": 200704,
+  "max_pixels": 200704,
+  "first_adapter_block": 24,
+  "adapter_rank": 8,
+  "adapter_learning_rate": 5e-05,
+  "decoder_learning_rate": 0.0001,
+  "mask_weight": 1.0,
+  "max_new_tokens": 4096,
+  "seed": 42
+}
