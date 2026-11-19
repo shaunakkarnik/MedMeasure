@@ -20,12 +20,26 @@ training, and evaluation generates answers through the adapted VLM.
 - [V2 model and training](docs/version2.md) describes the two objectives and
   links to ICE setup.
 - [Final V2 evaluation](docs/version2-aligned.md) covers setup, sharding, and
-  the four-method comparison. **The full evaluation is running and results are pending.**
+  the four-method comparison.
+- [Results index](results/README.md) maps each run to its evaluator, checkpoint,
+  split, and saved evidence.
 - [V1 guide](docs/version1.md) covers the frozen decoder and feature cache.
 - [Baseline and data audit](docs/baseline-and-data.md) describes the official
   baseline, dataset pins, and split exposure.
 - [Project plan](docs/project-plan.md) records the research goals and methodology.
 - [Current work](CONTINUITY.md) records pending experiments and validation limits.
+
+## Review the V2 experiment
+
+1. [Model and losses](medmeasure/version2.py) defines the vision LoRA adapters
+   and the answer and mask objectives.
+2. [Training and checkpoint selection](scripts/version2.py) ranks checkpoints
+   using held-out validation and records the training settings.
+3. [Final benchmark runner](scripts/version2_original.py) runs and merges the
+   image-first shards and checks their prompts and reference measurements.
+4. [Final comparison](scripts/compare_final_results.py) pairs predictions by
+   slice, counts failures in threshold accuracy, and compares errors on shared
+   successful slices.
 
 ## Repository structure
 
@@ -73,8 +87,8 @@ GPU training requires the separately staged scans and pinned model weights.
 
 Prepared scans, model weights, feature caches, and training checkpoints live
 outside Git. Use the paths in the ICE guide for a new installation.
-`results/` retains the row-level evidence needed to rescore the reported V1
-and baseline runs, along with V2 validation and smoke summaries.
+The [results index](results/README.md) links to the row-level V1 and baseline
+evidence and the saved V2 summaries.
 
 Training and validation are separated by case within the official training
 split. The released backbone may have seen 104 official test cases through its

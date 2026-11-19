@@ -13,9 +13,8 @@
   `audit`, `hf-cache`, `models`, and `runs`. After the array finishes, merge
   the four shards per model and run the four-method comparison on full test and
   the 43-case historical-disjoint subset. [Evaluation runbook](docs/version2-aligned.md).
-- V1's full-test predictions and the historical baseline are retained in
-  `results/`. [V1 report](docs/version1-results.md) and
-  [paired analysis](results/v1-baseline-paired-6252813/README.md).
+- The [results index](results/README.md) links the historical baseline, saved
+  V1 predictions and paired analysis, and earlier V2 runs to their evaluators.
   [Project plan](docs/project-plan.md).
 - Handoff checks passed for the image-first adapter, Slurm syntax, and the
   comparison command with saved baseline data as a fixture. The full local

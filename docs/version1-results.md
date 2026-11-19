@@ -3,18 +3,19 @@
 ICE evaluation job **6252813** reports complete official test coverage. Training
 was ten total epochs with a frozen backbone; the best validation loss was at
 epoch 8. The expected checkpoint is `runs/v1-cached-6251584/best.pt`, selected by
-validation loss before the full test. Serialized checkpoint/run provenance has
-not yet been retrieved. The source for the specialist numbers is the user's pasted
-summary, saved in [summary.json](../results/v1-eval-6252813/summary.json), with
+validation loss before the full test. The saved
+[run metadata](../results/v1-eval-6252813/run.json) records the checkpoint hash.
+The checkpoint bytes are unavailable for independent verification. The specialist
+summary was transcribed from the ICE output and saved in
+[summary.json](../results/v1-eval-6252813/summary.json), with
 [receipt/validation limits](../results/v1-eval-6252813/receipt.json) and
 [machine-readable comparison](../results/v1-eval-6252813/comparison.json).
 
 Baseline summaries come from merged PR #1 at commit
 `1866d3c3c1b1ad61d021e8f1e117004dad98e752`, under
 `results/kits23-medvision-v0-v140-rik/`. Earlier local rescoring of its 32 shard
-logs reproduced the full baseline summary. Baseline provenance declares the same
-model/dataset revision and annotation version as the specialist pilot, but the
-specialist's per-row identities/run hashes still need retrieval and comparison.
+logs reproduced the full baseline summary. The saved V1 predictions and run
+metadata support the row-level checks described under [Paired outputs now available](#paired-outputs-now-available).
 
 ## Primary comparison: all-row below-10%-error rate
 
@@ -63,9 +64,8 @@ all-row Dice is **0.6617**, IoU **0.5761**; diagnostic Dice is **0.5986**, IoU
 - Released-backbone exposure remains: 104 official test cases appear in audited
   legacy sizing training. The 43-case diagnostic is absent from those audited
   sizing plans, not proven unseen across all tasks.
-- Retrieve `run.json`, per-row predictions, selected rows, overlays and training
-  checkpoints/logs. Audit matching identities/pins, compare paired successful-row
-  errors, stratify by patient/reference size and inspect empty-mask/failed-fit cases.
+- Retrieve the training checkpoint and logs for independent verification. Inspect
+  empty-mask and failed-fit cases and evaluate case-level uncertainty.
 - Retain this run as the first result. Future dropout/learning-rate changes should
   be selected on validation cases, with test results treated as descriptive after
   this test exposure. Validation scoring is not yet implemented in the current CLI.

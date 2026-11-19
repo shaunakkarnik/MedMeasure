@@ -25,6 +25,7 @@ then answer success rate, then lower mean relative error. Both arms selected
 epoch 3. Resume uses `last.pt` and validates the source and experiment contract.
 Keep training snapshot `14e92dd` available for the existing checkpoints.
 
-**Final V2 evaluation results are pending.** Frozen MedVision and both V2
-checkpoints use the same image-first benchmark. V1 contributes its saved
-mask-derived measurements on the same test slices.
+Frozen MedVision and both V2 checkpoints use the same image-first benchmark.
+V1 contributes its saved mask-derived measurements on the same test slices.
+See the [results index](../results/README.md) for available evidence and
+[current work](../CONTINUITY.md) for run status.

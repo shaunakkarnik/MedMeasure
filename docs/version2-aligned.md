@@ -1,9 +1,10 @@
 # Final V2 evaluation on ICE
 
-**Full evaluation results are pending.** The comparison uses released
-MedVision-V0, V2 text and joint epoch-3 checkpoints, and V1's saved geometric
-measurements on the 3,179 official KiTS23 test slices. The three text models
-use the pinned upstream vLLM benchmark with image-first prompts.
+The comparison uses released MedVision-V0, V2 text and joint epoch-3 checkpoints,
+and V1's saved geometric measurements on the 3,179 official KiTS23 test slices.
+The three text models use the pinned upstream vLLM benchmark with image-first prompts.
+See [current work](../CONTINUITY.md) for run status and the
+[results index](../results/README.md) for saved evidence.
 
 ## Setup and smoke test
 
