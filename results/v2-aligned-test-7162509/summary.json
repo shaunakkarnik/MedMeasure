@@ -1,0 +1,106 @@
+{
+  "groups": {
+    "all": {
+      "total": 3179,
+      "all_methods_success_count": 2947,
+      "methods": {
+        "frozen": {
+          "successes": 3179,
+          "failures": 0,
+          "within_10_percent_all_rows": 0.2796476879521862,
+          "mae_mm_success_only": 10.6210382085208,
+          "mre_success_only": 0.4067582034802159,
+          "mae_mm_common_successes": 10.586283326755753,
+          "mre_common_successes": 0.36544677195526476
+        },
+        "text": {
+          "successes": 3142,
+          "failures": 37,
+          "within_10_percent_all_rows": 0.14878892733564014,
+          "mae_mm_success_only": 12.836821565652334,
+          "mre_success_only": 0.38771914609685987,
+          "mae_mm_common_successes": 13.100045796042586,
+          "mre_common_successes": 0.3692922278396728
+        },
+        "joint": {
+          "successes": 3125,
+          "failures": 54,
+          "within_10_percent_all_rows": 0.1896822900283108,
+          "mae_mm_success_only": 11.556299348526,
+          "mre_success_only": 0.4039697677159418,
+          "mae_mm_common_successes": 11.686535073896161,
+          "mre_common_successes": 0.3823797755482861
+        },
+        "version1": {
+          "successes": 3032,
+          "failures": 147,
+          "within_10_percent_all_rows": 0.4391318024536018,
+          "mae_mm_success_only": 6.6233428038440465,
+          "mre_success_only": 0.24512126835285547,
+          "mae_mm_common_successes": 6.610716211096004,
+          "mre_common_successes": 0.24635811545224712
+        }
+      }
+    },
+    "legacy_disjoint": {
+      "total": 825,
+      "all_methods_success_count": 761,
+      "methods": {
+        "frozen": {
+          "successes": 825,
+          "failures": 0,
+          "within_10_percent_all_rows": 0.15272727272727274,
+          "mae_mm_success_only": 11.376701448035963,
+          "mre_success_only": 0.5116478251963421,
+          "mae_mm_common_successes": 11.4667363260798,
+          "mre_common_successes": 0.46887258199573445
+        },
+        "text": {
+          "successes": 820,
+          "failures": 5,
+          "within_10_percent_all_rows": 0.11878787878787879,
+          "mae_mm_success_only": 11.389118949959919,
+          "mre_success_only": 0.40918906387088816,
+          "mae_mm_common_successes": 11.662115021228164,
+          "mre_common_successes": 0.3868829129230541
+        },
+        "joint": {
+          "successes": 817,
+          "failures": 8,
+          "within_10_percent_all_rows": 0.14303030303030304,
+          "mae_mm_success_only": 11.300429589891376,
+          "mre_success_only": 0.43277489063146324,
+          "mae_mm_common_successes": 11.478576706210825,
+          "mre_common_successes": 0.40797007999094004
+        },
+        "version1": {
+          "successes": 773,
+          "failures": 52,
+          "within_10_percent_all_rows": 0.38303030303030305,
+          "mae_mm_success_only": 7.0742605761136925,
+          "mre_success_only": 0.30792809973537133,
+          "mae_mm_common_successes": 7.098800303744894,
+          "mre_common_successes": 0.30961318600287946
+        }
+      }
+    }
+  },
+  "text_evaluation_protocol": {
+    "execution_script_sha256": "51f73952013d376a392297caa744ac3c6b0d04abd462b0f3a51c05b8fea3ca03",
+    "input_adapter_sha256": "5212226732e4063aa38a5ec7a8022ab1f623d60417463678192cf8c001d4258e",
+    "content_order": "image_first"
+  },
+  "notes": [
+    "All-row threshold accuracy includes every failure.",
+    "Common-success MAE/MRE use the same rows for all four methods.",
+    "V1 uses mask geometry; text methods share the pinned evaluator and recorded content order.",
+    "V1 uses its trained 448-pixel processor budget; text models use benchmark preprocessing."
+  ],
+  "source_sha256": {
+    "version1_predictions": "42a365e2460c3e0ede69b04d6668e10504618f30d8d82b5d356f66884accc296",
+    "text_samples": "500f6ebcf0041b5067f00111c7c6127ec6892798cf6b57093d02de6f7fcc2bce",
+    "joint_samples": "fd28fa7c732e1d01d61539dcb5c41a83cd78902ee0aaf643f54f74a49abf338f",
+    "test_manifest": "0698c7e35b9e02ae97cfcf7302dd56120be458095e692ed3ebe22217a006f876",
+    "frozen_samples": "5f7616bd5285457d6597f6bd01f3670afd98e7637305b8ee30a90e7c5adabf3b"
+  }
+}
